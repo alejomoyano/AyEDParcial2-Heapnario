@@ -1,7 +1,7 @@
 #ifndef ALGORITMOS_TP1_COLA_H
 #define ALGORITMOS_TP1_COLA_H
 
-#include "Nodo.h"
+#include "NodoHeap.h"
 
 /**
  * Clase que implementa una Cola generica, ya que puede

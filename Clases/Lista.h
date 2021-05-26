@@ -1,7 +1,7 @@
 #ifndef ALGORITMOS_TP1_LISTA_H
 #define ALGORITMOS_TP1_LISTA_H
 
-#include "Nodo.h"
+#include "NodoHeap.h"
 
 /**
  * Clase que implementa una Lista Enlazada generica, ya que puede
