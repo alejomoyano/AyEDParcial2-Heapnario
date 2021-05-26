@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Cola.h
+Nodo.h
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
+
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
+iostream
+-
+
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Pila.h
+Nodo.h
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
+
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/main.cpp
+iostream
+-
+fstream
+-
+string
+-
+Clases/Nodo.h
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
+Clases/Cola.h
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Cola.h
+Clases/Pila.h
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Pila.h
+
