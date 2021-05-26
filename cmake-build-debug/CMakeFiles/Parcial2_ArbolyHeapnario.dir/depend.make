@@ -3,6 +3,7 @@
 
 CMakeFiles/Parcial2_ArbolyHeapnario.dir/main.cpp.obj: ../Clases/Cola.h
 CMakeFiles/Parcial2_ArbolyHeapnario.dir/main.cpp.obj: ../Clases/Nodo.h
+CMakeFiles/Parcial2_ArbolyHeapnario.dir/main.cpp.obj: ../Clases/NodoHeap.h
 CMakeFiles/Parcial2_ArbolyHeapnario.dir/main.cpp.obj: ../Clases/Pila.h
 CMakeFiles/Parcial2_ArbolyHeapnario.dir/main.cpp.obj: ../main.cpp
 

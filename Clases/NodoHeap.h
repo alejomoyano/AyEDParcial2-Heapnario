@@ -15,6 +15,9 @@ private:
     vector<NodoHeap<T>*> *hijos;
 
 public:
+    NodoHeap(){
+        padre= nullptr;
+    };
 
     NodoHeap(T dato, NodoHeap<T>* padre) : dato(dato), padre(padre){}
 

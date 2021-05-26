@@ -1,7 +1,7 @@
 #ifndef ALGORITMOS_TP1_PILA_H
 #define ALGORITMOS_TP1_PILA_H
 
-#include "NodoHeap.h"
+#include "Nodo.h"
 
 /**
  * Clase que implementa una Pila generica, ya que puede

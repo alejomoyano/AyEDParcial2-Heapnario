@@ -16,6 +16,12 @@ iostream
 vector
 -
 
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/NodoHeap.h
+iostream
+-
+vector
+-
+
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Pila.h
 Nodo.h
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
@@ -25,14 +31,14 @@ iostream
 -
 fstream
 -
-string
--
 regex
 -
 Clases/Cola.h
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Cola.h
 Clases/Pila.h
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Pila.h
+Clases/NodoHeap.h
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/NodoHeap.h
 Clases/Nodo.h
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
 
