@@ -12,7 +12,7 @@ private:
     int contador=1;
     T dato;
     NodoHeap<T> *padre;
-    vector<NodoHeap<T>*> *hijos;
+    vector<NodoHeap<T>> hijos;
 
 public:
     NodoHeap(){
@@ -33,13 +33,18 @@ public:
         return padre;
     }
 
-    vector<NodoHeap<T>*>* getHijos() const {
-        return hijos;
+//    vector<NodoHeap<T>>* getHijos() const {
+//        vector<NodoHeap<T>>* childs=&hijos;
+//        return childs;
+//    }
+//
+//
+    void setHijos(const vector<NodoHeap<T>> &hijos) {
+        NodoHeap::hijos = hijos;
     }
 
-
-    void setHijo(NodoHeap<T> *hijo) {
-        NodoHeap::hijos->push_back(*hijo);
+    void sumar_contador(){
+        contador++;
     }
 
 

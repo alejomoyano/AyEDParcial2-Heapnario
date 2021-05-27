@@ -24,6 +24,8 @@ public:
     bool esVacia();
 
     T peek();
+
+    int size();
 };
 
 
@@ -98,6 +100,19 @@ T Pila<T>::peek() {
         throw 1;
 
     return inicio->getDato();
+}
+template<class T>
+int Pila<T>::size() {
+    if(esVacia()){return 0;}
+    Nodo<T> *aux = inicio;
+    int cont = 0;
+
+    while (aux != NULL) {
+        cont++;
+        aux = aux->getNext();
+    }
+
+    return cont;
 }
 
 #endif //ALGORITMOS_TP1_PILA_H
