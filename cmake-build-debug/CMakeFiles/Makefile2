@@ -53,19 +53,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\Programas\Archivos de programa\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\Programas\CLion 2021.1\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\Programas\Archivos de programa\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "D:\Programas\CLion 2021.1\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = E:\Documentos\Proyectos\AyEDParcial2-Heapnario
+CMAKE_SOURCE_DIR = "D:\Documentos\ALGORITMOS 2021\SEGUNDO PARCIAL 2021\proyecto"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = E:\Documentos\Proyectos\AyEDParcial2-Heapnario\cmake-build-debug
+CMAKE_BINARY_DIR = "D:\Documentos\ALGORITMOS 2021\SEGUNDO PARCIAL 2021\proyecto\cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -92,14 +92,14 @@ clean: CMakeFiles/Parcial2_ArbolyHeapnario.dir/clean
 CMakeFiles/Parcial2_ArbolyHeapnario.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Parcial2_ArbolyHeapnario.dir\build.make CMakeFiles/Parcial2_ArbolyHeapnario.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Parcial2_ArbolyHeapnario.dir\build.make CMakeFiles/Parcial2_ArbolyHeapnario.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=E:\Documentos\Proyectos\AyEDParcial2-Heapnario\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target Parcial2_ArbolyHeapnario"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="D:\Documentos\ALGORITMOS 2021\SEGUNDO PARCIAL 2021\proyecto\cmake-build-debug\CMakeFiles" --progress-num=1,2 "Built target Parcial2_ArbolyHeapnario"
 .PHONY : CMakeFiles/Parcial2_ArbolyHeapnario.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Parcial2_ArbolyHeapnario.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Documentos\Proyectos\AyEDParcial2-Heapnario\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Documentos\ALGORITMOS 2021\SEGUNDO PARCIAL 2021\proyecto\cmake-build-debug\CMakeFiles" 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Parcial2_ArbolyHeapnario.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start E:\Documentos\Proyectos\AyEDParcial2-Heapnario\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "D:\Documentos\ALGORITMOS 2021\SEGUNDO PARCIAL 2021\proyecto\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/Parcial2_ArbolyHeapnario.dir/rule
 
 # Convenience name for target.

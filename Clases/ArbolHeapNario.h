@@ -6,7 +6,10 @@
 #include "Pila.h"
 #include <iostream>
 using namespace std;
-
+/**
+*En el arbol se guarda la raiz y se hacen las funciones para agregar y ordenar los nodos
+* y el ordenamiento final
+*/
 template<class T>
 class ArbolHeapNario {
 private:
@@ -19,12 +22,16 @@ public:
     void put(T dato);
 };
 
+
 template<class T>
 ArbolHeapNario<T>::ArbolHeapNario(int orden) {
     n = orden;
     raiz = nullptr;
 }
-
+/**
+ *Agregamos los datos al arbol, si es el primero lo ponemos como raiz, desp usamos la
+ * cola para agregar los hijos formando un arbol completo
+*/
 template<class T>
 void ArbolHeapNario<T>::put(T dato) {
     if (raiz == nullptr) {

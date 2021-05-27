@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "E:/Documentos/Proyectos/AyEDParcial2-Heapnario/main.cpp" "E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/CMakeFiles/Parcial2_ArbolyHeapnario.dir/main.cpp.obj"
+  "D:/Documentos/ALGORITMOS 2021/SEGUNDO PARCIAL 2021/proyecto/main.cpp" "D:/Documentos/ALGORITMOS 2021/SEGUNDO PARCIAL 2021/proyecto/cmake-build-debug/CMakeFiles/Parcial2_ArbolyHeapnario.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

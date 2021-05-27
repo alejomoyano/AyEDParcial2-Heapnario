@@ -1,3 +1,3 @@
-E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/CMakeFiles/Parcial2_ArbolyHeapnario.dir
-E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Documentos/ALGORITMOS 2021/SEGUNDO PARCIAL 2021/proyecto/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Documentos/ALGORITMOS 2021/SEGUNDO PARCIAL 2021/proyecto/cmake-build-debug/CMakeFiles/Parcial2_ArbolyHeapnario.dir
+D:/Documentos/ALGORITMOS 2021/SEGUNDO PARCIAL 2021/proyecto/cmake-build-debug/CMakeFiles/rebuild_cache.dir
