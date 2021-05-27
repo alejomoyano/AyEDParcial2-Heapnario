@@ -5,18 +5,18 @@
 #include "Cola.h"
 #include "Pila.h"
 #include <iostream>
+
 using namespace std;
 
-template<class T>
-class ArbolHeapNario {
-private:
-    int n;
-    NodoHeap<T> *raiz;
-    Cola<NodoHeap<T>*> cola;
-    Pila<NodoHeap<T>*> pila;
-public:
-    ArbolHeapNario(int orden);
-    void put(T dato);
+template<class T> class ArbolHeapNario {
+    private:
+        int n;
+        NodoHeap<T> *raiz;
+        Cola<NodoHeap<T>*> cola;
+        Pila<NodoHeap<T>*> pila;
+    public:
+        ArbolHeapNario(int orden);
+        void put(T dato);
 };
 
 template<class T>
@@ -25,8 +25,7 @@ ArbolHeapNario<T>::ArbolHeapNario(int orden) {
     raiz = nullptr;
 }
 
-template<class T>
-void ArbolHeapNario<T>::put(T dato) {
+template<class T> void ArbolHeapNario<T>::put(T dato) {
     if (raiz == nullptr) {
         raiz = new NodoHeap<T>(dato);
         cola.encolar(raiz);

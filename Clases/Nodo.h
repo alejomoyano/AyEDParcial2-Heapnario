@@ -1,5 +1,5 @@
-#ifndef ALGORITMOS_TP1_NODO_H
-#define ALGORITMOS_TP1_NODO_H
+#ifndef PARCIAL2_ARBOLYHEAPNARIO_NODO_H
+#define PARCIAL2_ARBOLYHEAPNARIO_NODO_H
 
 #include <iostream>
 
@@ -33,4 +33,4 @@ public:
     }
 };
 
-#endif //ALGORITMOS_TP1_NODO_H
+#endif //PARCIAL2_ARBOLYHEAPNARIO_NODO_H

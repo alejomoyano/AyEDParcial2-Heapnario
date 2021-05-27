@@ -1,14 +1,12 @@
-#ifndef ALGORITMOS_TP2_NODO_H
-#define ALGORITMOS_TP2_NODO_H
+#ifndef PARCIAL2_ARBOLYHEAPNARIO_NODOHEAP_H
+#define PARCIAL2_ARBOLYHEAPNARIO_NODOHEAP_H
 
 #include <iostream>
 #include <vector>
-#include <list>
 
 using namespace std;
 
-template<class T>
-class NodoHeap {
+template<class T> class NodoHeap {
 private:
     int contador=1;
     T dato;
@@ -25,29 +23,24 @@ public:
     int getCantidadHijos();
 };
 
-template<class T>
-NodoHeap<T>::NodoHeap(T d) {
+template<class T> NodoHeap<T>::NodoHeap(T d) {
     dato = d;
     padre = nullptr;
 }
 
-template<class T>
-NodoHeap<T>::NodoHeap(const NodoHeap<T> &nh) {
+template<class T> NodoHeap<T>::NodoHeap(const NodoHeap<T> &nh) {
     contador = nh.contador;
     dato = nh.dato;
     padre = nh.padre;
     hijos = nh.hijos;
 }
 
-template<class T>
-void NodoHeap<T>::putHijo(NodoHeap<T> *nodo) {
+template<class T> void NodoHeap<T>::putHijo(NodoHeap<T> *nodo) {
     hijos.push_back(nodo);
 }
 
-template<class T>
-int NodoHeap<T>::getCantidadHijos() {
+template<class T> int NodoHeap<T>::getCantidadHijos() {
     return hijos.size();
 }
 
-
-#endif //ALGORITMOS_TP2_NODO_H
+#endif //PARCIAL2_ARBOLYHEAPNARIO_NODOHEAP_H

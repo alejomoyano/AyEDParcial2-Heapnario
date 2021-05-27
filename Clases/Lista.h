@@ -1,5 +1,5 @@
-#ifndef ALGORITMOS_TP1_LISTA_H
-#define ALGORITMOS_TP1_LISTA_H
+#ifndef PARCIAL2_ARBOLYHEAPNARIO_LISTA_H
+#define PARCIAL2_ARBOLYHEAPNARIO_LISTA_H
 
 #include "NodoHeap.h"
 
@@ -8,36 +8,22 @@
  * almacenar cualquier tipo de dato T
  * @tparam T cualquier tipo de dato
  */
-template<class T>
-class Lista {
+template<class T> class Lista {
 private:
     Nodo<T> *inicio;
 public:
     Lista();
-
     Lista(const Lista<T> &li);
-
     ~Lista();
-
     bool esVacia();
-
     int getTamanio();
-
     void insertar(int pos, T dato);
-
     void insertarPrimero(T dato);
-
     void insertarUltimo(T dato);
-
     void remover(int pos);
-
     T getDato(int pos);
-
     void reemplazar(int pos, T dato);
-
     void vaciar();
-
-    void insertAfter2(T, int, T);
 
 };
 
@@ -45,8 +31,7 @@ public:
  * Constructor de la clase Lista
  * @tparam T
  */
-template<class T>
-Lista<T>::Lista() {
+template<class T> Lista<T>::Lista() {
     inicio = NULL;
 }
 
@@ -55,8 +40,7 @@ Lista<T>::Lista() {
  * @tparam T
  * @param li
  */
-template<class T>
-Lista<T>::Lista(const Lista<T> &li) {
+template<class T> Lista<T>::Lista(const Lista<T> &li) {
     inicio = nullptr;
     Nodo<T> *auxli = li.inicio;
     if (auxli == nullptr)
@@ -79,8 +63,7 @@ Lista<T>::Lista(const Lista<T> &li) {
  * utilizados en la lista
  * @tparam T
  */
-template<class T>
-Lista<T>::~Lista() {
+template<class T> Lista<T>::~Lista() {
     vaciar();
 }
 
@@ -89,8 +72,7 @@ Lista<T>::~Lista() {
  * @tparam T
  * @return true si la lista esta vacia, sino false
  */
-template<class T>
-bool Lista<T>::esVacia() {
+template<class T> bool Lista<T>::esVacia() {
     return inicio == NULL;
 }
 
@@ -99,8 +81,7 @@ bool Lista<T>::esVacia() {
  * @tparam T
  * @return la cantidad de nodos de la lista
  */
-template<class T>
-int Lista<T>::getTamanio() {
+template<class T> int Lista<T>::getTamanio() {
     Nodo<T> *aux = inicio;
     int cont = 0;
 
@@ -118,8 +99,7 @@ int Lista<T>::getTamanio() {
  * @param pos lugar donde será insertado el dato
  * @param dato  dato a insertar
  */
-template<class T>
-void Lista<T>::insertar(int pos, T dato) {
+template<class T> void Lista<T>::insertar(int pos, T dato) {
     int cont = 0;
     Nodo<T> *aux = inicio;
 
@@ -146,8 +126,7 @@ void Lista<T>::insertar(int pos, T dato) {
  * @tparam T
  * @param dato dato a insertar
  */
-template<class T>
-void Lista<T>::insertarPrimero(T dato) {
+template<class T> void Lista<T>::insertarPrimero(T dato) {
     Nodo<T> *nn = new Nodo<T>(dato, inicio);
     inicio = nn;
 }
@@ -157,8 +136,7 @@ void Lista<T>::insertarPrimero(T dato) {
  * @tparam T
  * @param dato dato a insertar
  */
-template<class T>
-void Lista<T>::insertarUltimo(T dato) {
+template<class T> void Lista<T>::insertarUltimo(T dato) {
     if (NULL == inicio) {
         inicio = new Nodo<T>(dato, NULL);
         return;
@@ -177,8 +155,7 @@ void Lista<T>::insertarUltimo(T dato) {
  * @tparam T
  * @param pos posicion del nodo a eliminar
  */
-template<class T>
-void Lista<T>::remover(int pos) {
+template<class T> void Lista<T>::remover(int pos) {
     int cont = 0;
     Nodo<T> *aux = inicio;
 
@@ -210,8 +187,7 @@ void Lista<T>::remover(int pos) {
  * @param pos posicion del dato
  * @return dato almacenado en el nodo
  */
-template<class T>
-T Lista<T>::getDato(int pos) {
+template<class T> T Lista<T>::getDato(int pos) {
     int i = 0;
     Nodo<T> *aux = inicio;
     while (i < pos && aux != NULL) {
@@ -231,8 +207,7 @@ T Lista<T>::getDato(int pos) {
  * @param pos posicion donde se desea reemplazar
  * @param dato nuevo dato a almacenar
  */
-template<class T>
-void Lista<T>::reemplazar(int pos, T dato) {
+template<class T> void Lista<T>::reemplazar(int pos, T dato) {
     int i = 0;
     Nodo<T> *aux = inicio;
     while (i < pos && aux != NULL) {
@@ -250,8 +225,7 @@ void Lista<T>::reemplazar(int pos, T dato) {
  * Función que vacia la lista enlazada
  * @tparam T
  */
-template<class T>
-void Lista<T>::vaciar() {
+template<class T> void Lista<T>::vaciar() {
     Nodo<T> *borr;
     Nodo<T> *aux = inicio;
 
@@ -263,4 +237,4 @@ void Lista<T>::vaciar() {
     inicio = NULL;
 }
 
-#endif //ALGORITMOS_TP1_LISTA_H
+#endif //PARCIAL2_ARBOLYHEAPNARIO_LISTA_H
