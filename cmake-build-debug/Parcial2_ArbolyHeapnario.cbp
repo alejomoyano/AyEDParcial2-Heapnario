@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug"/>
+				<Option working_dir="E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug"/>
+				<Option working_dir="E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Parcial2_ArbolyHeapnario">
-				<Option output="C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Parcial2_ArbolyHeapnario.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug"/>
+				<Option output="E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Parcial2_ArbolyHeapnario.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -43,15 +43,15 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 Parcial2_ArbolyHeapnario"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 Parcial2_ArbolyHeapnario"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Parcial2_ArbolyHeapnario/fast">
-				<Option output="C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Parcial2_ArbolyHeapnario.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug"/>
+				<Option output="E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Parcial2_ArbolyHeapnario.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -65,27 +65,30 @@
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 Parcial2_ArbolyHeapnario/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 Parcial2_ArbolyHeapnario/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug"/>
+				<Option working_dir="E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/main.cpp">
+		<Unit filename="E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/ArbolHeapNario.h">
 			<Option target="Parcial2_ArbolyHeapnario"/>
 		</Unit>
-		<Unit filename="C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/CMakeLists.txt">
+		<Unit filename="E:/Documentos/Proyectos/AyEDParcial2-Heapnario/main.cpp">
+			<Option target="Parcial2_ArbolyHeapnario"/>
+		</Unit>
+		<Unit filename="E:/Documentos/Proyectos/AyEDParcial2-Heapnario/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

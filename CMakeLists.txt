@@ -3,4 +3,4 @@ project(Parcial2_ArbolyHeapnario)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Parcial2_ArbolyHeapnario main.cpp)
+add_executable(Parcial2_ArbolyHeapnario main.cpp Clases/ArbolHeapNario.h)

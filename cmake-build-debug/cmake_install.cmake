@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario
+# Install script for directory: E:/Documentos/Proyectos/AyEDParcial2-Heapnario
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/Documentos/Proyectos/AyEDParcial2-Heapnario/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

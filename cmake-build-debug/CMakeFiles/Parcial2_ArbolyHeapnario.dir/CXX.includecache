@@ -6,19 +6,25 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Cola.h
-Nodo.h
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
-
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Lista.h
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/ArbolHeapNario.h
 NodoHeap.h
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/NodoHeap.h
-
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/NodoHeap.h
+Cola.h
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/Cola.h
+Pila.h
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/Pila.h
 iostream
 -
 
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/NodoHeap.h
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/Cola.h
+Nodo.h
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/Nodo.h
+
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/Nodo.h
+iostream
+-
+
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/NodoHeap.h
 iostream
 -
 vector
@@ -26,11 +32,11 @@ vector
 list
 -
 
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Pila.h
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/Pila.h
 Nodo.h
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/Nodo.h
 
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/main.cpp
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/main.cpp
 iostream
 -
 fstream
@@ -39,14 +45,6 @@ regex
 -
 vector
 -
-Clases/Cola.h
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Cola.h
-Clases/Pila.h
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Pila.h
-Clases/NodoHeap.h
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/NodoHeap.h
-Clases/Nodo.h
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
-Clases/Lista.h
-C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Lista.h
+Clases/ArbolHeapNario.h
+E:/Documentos/Proyectos/AyEDParcial2-Heapnario/Clases/ArbolHeapNario.h
 

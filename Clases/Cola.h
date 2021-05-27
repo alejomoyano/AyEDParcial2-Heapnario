@@ -28,7 +28,7 @@ public:
 
     void vaciar();
 
-    T* verFrente();
+    T verFrente();
 };
 
 
@@ -123,12 +123,10 @@ void Cola<T>::vaciar() {
  * Mostrar el dato del frente
  */
 template<class T>
-T* Cola<T>::verFrente() {
+T Cola<T>::verFrente() {
     if(esVacia())
         throw 404;
-    T tired = frente->getDato();
-    T* aux = &tired;
-    return aux;
+    return frente->getDato();
 }
 
 #endif //ALGORITMOS_TP1_COLA_H

@@ -13,46 +13,41 @@ private:
     int contador=1;
     T dato;
     NodoHeap<T> *padre;
-    list<NodoHeap<T>> hijos;
+    vector<NodoHeap<T>*> hijos;
 
 public:
-    NodoHeap(){
-        padre= nullptr;
-    };
+    NodoHeap(T d);
 
-    NodoHeap(T dato) : dato(dato){padre= nullptr;}
+    NodoHeap(const NodoHeap<T> &nh);
 
-    T getDato() const {
-        return dato;
-    }
+    void putHijo(NodoHeap<T> *nodo);
 
-    void setPadre(NodoHeap<T> *padre){
-        NodoHeap::padre=padre;
-    }
-
-    void setDato(T dato) {
-        NodoHeap::dato = dato;
-    }
-
-    NodoHeap<T> *getPadre() const {
-        return padre;
-    }
-
-//    vector<NodoHeap<T>>* getHijos() const {
-//        vector<NodoHeap<T>>* childs=&hijos;
-//        return childs;
-//    }
-//
-//
-    void setHijos(NodoHeap<T> child) {
-        hijos.push_back(child);
-    }
-
-    void sumar_contador(){
-        contador++;
-    }
-
-
+    int getCantidadHijos();
 };
+
+template<class T>
+NodoHeap<T>::NodoHeap(T d) {
+    dato = d;
+    padre = nullptr;
+}
+
+template<class T>
+NodoHeap<T>::NodoHeap(const NodoHeap<T> &nh) {
+    contador = nh.contador;
+    dato = nh.dato;
+    padre = nh.padre;
+    hijos = nh.hijos;
+}
+
+template<class T>
+void NodoHeap<T>::putHijo(NodoHeap<T> *nodo) {
+    hijos.push_back(nodo);
+}
+
+template<class T>
+int NodoHeap<T>::getCantidadHijos() {
+    return hijos.size();
+}
+
 
 #endif //ALGORITMOS_TP2_NODO_H
