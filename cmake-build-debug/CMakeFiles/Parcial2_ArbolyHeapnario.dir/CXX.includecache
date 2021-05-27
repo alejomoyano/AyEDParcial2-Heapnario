@@ -10,16 +10,20 @@ C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Cola.h
 Nodo.h
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
 
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Lista.h
+NodoHeap.h
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/NodoHeap.h
+
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
 iostream
--
-vector
 -
 
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/NodoHeap.h
 iostream
 -
 vector
+-
+list
 -
 
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Pila.h
@@ -43,4 +47,6 @@ Clases/NodoHeap.h
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/NodoHeap.h
 Clases/Nodo.h
 C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Nodo.h
+Clases/Lista.h
+C:/Users/alejo/Documents/AyED/Parcial2-ArbolyHeapnario/Clases/Lista.h
 

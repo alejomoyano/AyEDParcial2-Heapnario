@@ -7,6 +7,7 @@
 #include "Clases/Pila.h"
 #include "Clases/NodoHeap.h"
 #include "Clases/Nodo.h"
+#include "Clases/Lista.h"
 
 using namespace std;
 
@@ -14,7 +15,8 @@ int main() {
     Cola<NodoHeap<string>> cola_nh;
     Pila<NodoHeap<string>> pila_nh;
     NodoHeap<string> *padre;
-    vector<NodoHeap<string>> hijos;
+    Lista<NodoHeap<string>> hijos;
+    bool flag=1;
 
     int n=0; //n de n-ario
     cout<<"Cantidad de nodos:";
@@ -36,22 +38,23 @@ int main() {
             //--------en otra funcion--------
             //no hay raiz(cola vacia), entonces no tiene padre ese nodo. Esto se ejecuta solo al inicio del programa
             if(cola_nh.esVacia()){
-                NodoHeap<string> nodo_h = NodoHeap<string>(str, nullptr);
+                NodoHeap<string> nodo_h = NodoHeap<string>(str);
                 cola_nh.encolar(nodo_h);
                 pila_nh.push(nodo_h);
             }
             else {
-                auto paux = cola_nh.desencolar();
-                padre = &paux;
-                NodoHeap<string> nodo_h = NodoHeap<string>(str,padre);
-//                padre->setHijo(nodo_h);
-                hijos.push_back(nodo_h);
-                cola_nh.encolar(nodo_h);
-                pila_nh.push(nodo_h);
-                if (hijos.size()==n){ //si con el nodo que le metimos se completo, lo desencolamos
+
+                NodoHeap<string> nodo_hp = NodoHeap<string>();
+                nodo_hp.setDato(str);
+                nodo_hp.setPadre(cola_nh.verFrente());
+                cola_nh.verFrente()->setHijos(nodo_hp);
+//                hijos.insertarUltimo(nodo_hp);
+                cola_nh.encolar(nodo_hp);
+                pila_nh.push(nodo_hp);
+                if (hijos.getTamanio()==n){ //si con el nodo que le metimos se completo, lo desencolamos
                     cout<<"---------Desencolamos porque tiene todos los hijos---------\n";
-                    padre->setHijos(hijos);
-                    hijos.clear();
+//                    cola_nh.verFrente()->setHijos(hijos);
+                    cola_nh.desencolar();
                     //                    <<cola_nh.desencolar().getDato()<<endl;
                 }
             }

@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <list>
 
 using namespace std;
 
@@ -12,17 +13,21 @@ private:
     int contador=1;
     T dato;
     NodoHeap<T> *padre;
-    vector<NodoHeap<T>> hijos;
+    list<NodoHeap<T>> hijos;
 
 public:
     NodoHeap(){
         padre= nullptr;
     };
 
-    NodoHeap(T dato, NodoHeap<T>* padre) : dato(dato), padre(padre){}
+    NodoHeap(T dato) : dato(dato){padre= nullptr;}
 
     T getDato() const {
         return dato;
+    }
+
+    void setPadre(NodoHeap<T> *padre){
+        NodoHeap::padre=padre;
     }
 
     void setDato(T dato) {
@@ -39,8 +44,8 @@ public:
 //    }
 //
 //
-    void setHijos(const vector<NodoHeap<T>> &hijos) {
-        NodoHeap::hijos = hijos;
+    void setHijos(NodoHeap<T> child) {
+        hijos.push_back(child);
     }
 
     void sumar_contador(){
