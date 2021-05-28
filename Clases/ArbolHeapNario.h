@@ -34,10 +34,10 @@ template<class T> bool ArbolHeapNario<T>::palabraRepetida(T dato, NodoHeap<T>* a
         if(aux->getDato() == dato){
             aux->sumarCont();
             return true;
-        }else {
-            for (int i = 0; i < aux->getCantidadHijos(); i++){
-                return palabraRepetida(dato, aux->getCantidadHijos().at(i));
-            }
+//        }else {
+//            for (int i = 0; i < aux->getCantidadHijos(); i++){
+//                return palabraRepetida(dato, aux->getCantidadHijos().at(i));
+//            }
         }
     }
 }
