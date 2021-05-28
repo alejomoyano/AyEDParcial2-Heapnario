@@ -26,21 +26,27 @@ ArbolHeapNario<T>::ArbolHeapNario(int orden) {
     raiz = nullptr;
 }
 
-//busca un dato y devuelve puntero al nodo donde se encuentra
 template<class T> bool ArbolHeapNario<T>::palabraRepetida(T dato, NodoHeap<T>* aux) {
+    vector<NodoHeap<T>*> child = aux->getHijos();
+    int size = aux->getCantidadHijos();
+
     if (aux == nullptr){
         return false;
     } else {
         if(aux->getDato() == dato){
             aux->sumarCont();
             return true;
-//        }else {
-//            for (int i = 0; i < aux->getCantidadHijos(); i++){
-//                return palabraRepetida(dato, aux->getCantidadHijos().at(i));
-//            }
+        }else {
+            for (int i = 0; i < size; i++){
+                //con el return elimina la primer repetición pero no recorre el array más alla del hijo[0]
+                return palabraRepetida(dato, child[i]); //sin el return, recorre bien pero no devuelve nada entonces nunca se hace true la condicion de repetida, y se agrega igual
+            }
         }
     }
+    return false;
 }
+
+
 
 template<class T> void ArbolHeapNario<T>::put(T dato) {
     if (raiz == nullptr) {
