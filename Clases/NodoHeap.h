@@ -19,17 +19,30 @@ public:
 
     NodoHeap(const NodoHeap<T> &nh);
 
+    void setPadre(NodoHeap<T> *nodo);
+
     void putHijo(NodoHeap<T> *nodo);
 
     int getCantidadHijos();
 
+    NodoHeap<T>* getPadre();
+
     T getDato();
 
+    int getRepeticion();
+
     void sumarRepeticion();
+
+    NodoHeap<T>* buscarDato(T c);
+
+    NodoHeap<T>* buscarDatoEnHijos(T t);
+
 };
 /**
- *Constructor
-*/
+ * Constructor. Inicializa el puntero a padre en null.
+ * @tparam T
+ * @param d
+ */
 template<class T>
 NodoHeap<T>::NodoHeap(T d) {
     dato = d;
@@ -47,6 +60,11 @@ NodoHeap<T>::NodoHeap(const NodoHeap<T> &nh) {
     hijos = nh.hijos;
 }
 
+template<class T>
+void NodoHeap<T>::setPadre(NodoHeap<T> *nodo) {
+    padre = nodo;
+}
+
 /**
  *Le agrega un hijo al nodo actual
 */
@@ -61,6 +79,11 @@ int NodoHeap<T>::getCantidadHijos() {
 }
 
 template<class T>
+NodoHeap<T> *NodoHeap<T>::getPadre() {
+    return padre;
+}
+
+template<class T>
 T NodoHeap<T>::getDato() {
     return dato;
 }
@@ -68,6 +91,43 @@ T NodoHeap<T>::getDato() {
 template<class T>
 void NodoHeap<T>::sumarRepeticion() {
     repeticiones++;
+}
+
+template<class T>
+NodoHeap<T> *NodoHeap<T>::buscarDato(T c) {
+    if(this->getDato()==c){
+        return this;
+    }else{
+        return this->buscarDatoEnHijos(c);
+    }
+}
+
+/**
+ * Funcion recursiva de busqueda
+ * @tparam T
+ * @param dato
+ * @return direccion del Nodo que contiene ese dato (un puntero)
+ */
+template<class T>
+NodoHeap<T>* NodoHeap<T>::buscarDatoEnHijos(T t) {
+    for(int i=0; i<getCantidadHijos(); i++){
+        NodoHeap<T>* a=hijos.at(i);
+        if(a->getDato()==t){
+            cout<<"-----------------"<<endl;
+            cout<<"soy el dato: "<<t<<" ---- ";
+            cout<<"Estoy mirando a "<<hijos.at(i)->getDato()<<" indice: "<<i<<" padre: "<<this->getDato()<<endl;
+            return a;
+        }
+        else{
+            a->buscarDatoEnHijos(t);
+        }
+    }
+    return nullptr;
+}
+
+template<class T>
+int NodoHeap<T>::getRepeticion() {
+    return repeticiones;
 }
 
 

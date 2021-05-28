@@ -19,7 +19,9 @@ private:
     Pila<NodoHeap<T>*> pila;
 public:
     ArbolHeapNario(int orden);
+
     void put(T dato);
+
 };
 
 
@@ -40,14 +42,24 @@ void ArbolHeapNario<T>::put(T dato) {
         pila.push(raiz);
     }
     else {
-        NodoHeap<T> *aux = cola.verFrente();
-        NodoHeap<T> *nodoNuevo = new NodoHeap<T>(dato);
-        aux->putHijo(nodoNuevo);
-        cola.encolar(nodoNuevo);
-        pila.push(nodoNuevo);
-        if(aux->getCantidadHijos() == n)
-            cola.desencolar();
+        NodoHeap<T>* a = raiz->buscarDato(dato);
+        if (a!= nullptr){
+            a->sumarRepeticion();
+            cout<<"se repite "<<a->getDato()<<" - "<<a->getRepeticion()<<endl;
+        }
+        else{
+            NodoHeap<T> *aux = cola.verFrente();
+            NodoHeap<T> *nodoNuevo = new NodoHeap<T>(dato);
+            aux->putHijo(nodoNuevo);
+            nodoNuevo->setPadre(aux);
+            cola.encolar(nodoNuevo);
+            pila.push(nodoNuevo);
+            if(aux->getCantidadHijos() == n)
+                cola.desencolar();
+        }
     }
 }
+
+
 
 #endif //PARCIAL2_ARBOLYHEAPNARIO_ARBOLHEAPNARIO_H
