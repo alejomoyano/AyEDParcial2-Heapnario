@@ -21,6 +21,12 @@ public:
     void putHijo(NodoHeap<T> *nodo);
 
     int getCantidadHijos();
+
+    T getDato();
+
+    void sumarCont();
+
+    vector<NodoHeap<T>*> getHijos();
 };
 
 template<class T> NodoHeap<T>::NodoHeap(T d) {
@@ -42,5 +48,18 @@ template<class T> void NodoHeap<T>::putHijo(NodoHeap<T> *nodo) {
 template<class T> int NodoHeap<T>::getCantidadHijos() {
     return hijos.size();
 }
+
+template<class T> T NodoHeap<T>::getDato() {
+    return dato;
+}
+
+template<class T> void NodoHeap<T>::sumarCont() {
+    contador++;
+}
+
+template<class T> vector<NodoHeap<T>*> NodoHeap<T>::getHijos(){
+    return hijos;
+}
+
 
 #endif //PARCIAL2_ARBOLYHEAPNARIO_NODOHEAP_H
