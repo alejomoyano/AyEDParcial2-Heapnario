@@ -95,9 +95,9 @@ void NodoHeap<T>::sumarRepeticion() {
 
 template<class T>
 NodoHeap<T> *NodoHeap<T>::buscarDato(T c) {
-    if(this->getDato()==c){
+    if(dato == c){
         return this;
-    }else{
+    } else {
         return this->buscarDatoEnHijos(c);
     }
 }
@@ -110,17 +110,21 @@ NodoHeap<T> *NodoHeap<T>::buscarDato(T c) {
  */
 template<class T>
 NodoHeap<T>* NodoHeap<T>::buscarDatoEnHijos(T t) {
+    NodoHeap<T> *aux;
     for(int i=0; i<getCantidadHijos(); i++){
         NodoHeap<T>* a=hijos.at(i);
-        if(a->getDato()==t){
-            cout<<"-----------------"<<endl;
-            cout<<"soy el dato: "<<t<<" ---- ";
-            cout<<"Estoy mirando a "<<hijos.at(i)->getDato()<<" indice: "<<i<<" padre: "<<this->getDato()<<endl;
-            return a;
-        }
-        else{
-            a->buscarDatoEnHijos(t);
-        }
+        aux = a->buscarDato(t);
+        if(aux != nullptr)
+            return aux;
+//        if(a->getDato()==t){
+//            cout<<"-----------------"<<endl;
+//            cout<<"soy el dato: "<<t<<" ---- ";
+//            cout<<"Estoy mirando a "<<hijos.at(i)->getDato()<<" indice: "<<i<<" padre: "<<this->getDato()<<endl;
+//            return a;
+//        }
+//        else{
+//            a->buscarDatoEnHijos(t);
+//        }
     }
     return nullptr;
 }
