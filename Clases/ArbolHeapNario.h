@@ -17,7 +17,7 @@ template<class T> class ArbolHeapNario {
     public:
         ArbolHeapNario(int orden);
         void put(T dato);
-        bool palabraRepetida(T dato, NodoHeap<T>* aux);
+        bool palabraRepetida(NodoHeap<T>* dato, Pila<NodoHeap<T>*> aux);
 };
 
 template<class T>
@@ -26,24 +26,14 @@ ArbolHeapNario<T>::ArbolHeapNario(int orden) {
     raiz = nullptr;
 }
 
-template<class T> bool ArbolHeapNario<T>::palabraRepetida(T dato, NodoHeap<T>* aux) {
-    vector<NodoHeap<T>*> child = aux->getHijos();
-    int size = aux->getCantidadHijos();
-
-    if (aux == nullptr){
+template<class T> bool ArbolHeapNario<T>::palabraRepetida(NodoHeap<T>* dato, Pila<NodoHeap<T>*> aux) {
+    NodoHeap<T>* result = aux.esta(dato);
+    if(result!= nullptr) {
+        result->sumarCont();
+        return true;
+    } else{
         return false;
-    } else {
-        if(aux->getDato() == dato){
-            aux->sumarCont();
-            return true;
-        }else {
-            for (int i = 0; i < size; i++){
-                //con el return elimina la primer repetición pero no recorre el array más alla del hijo[0]
-                return palabraRepetida(dato, child[i]); //sin el return, recorre bien pero no devuelve nada entonces nunca se hace true la condicion de repetida, y se agrega igual
-            }
-        }
     }
-    return false;
 }
 
 
@@ -57,9 +47,9 @@ template<class T> void ArbolHeapNario<T>::put(T dato) {
         cout << endl <<endl;
     }
     else {
-        if (!(palabraRepetida(dato,raiz))) {
-        NodoHeap<T> *aux = cola.verFrente();
         NodoHeap<T> *nodoNuevo = new NodoHeap<T>(dato);
+        if (!(palabraRepetida(nodoNuevo, pila))) {
+        NodoHeap<T> *aux = cola.verFrente();
         aux->putHijo(nodoNuevo);
         cola.encolar(nodoNuevo);
         pila.push(nodoNuevo);

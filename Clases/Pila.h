@@ -13,12 +13,16 @@ template<class T> class Pila {
         Nodo<T> *inicio;
     public:
         Pila();
+        Pila(Nodo<T>* n) { inicio = n; };
     //    ~Pila();  El destructor genera problemas si no existe un constructor por copia
         void push(T dato);
         T pop();
         bool esVacia();
         T peek();
         int size();
+        Pila<T>* resto();
+        T esta(T d);
+
 };
 
 
@@ -97,5 +101,24 @@ template<class T> int Pila<T>::size() {
 
     return cont;
 }
+
+template<class T>
+Pila<T>* Pila<T>::resto() {
+    Pila* copia = new Pila<T>(inicio->getNext());
+    return copia;
+}
+
+template<class T>
+T Pila<T>::esta(T d) {
+    if(!esVacia()){
+        if(inicio->getDato()== d){ //acá está el error
+            return inicio->getDato();
+        } else{
+            return this->resto()->esta(d);
+        }
+    }
+    return nullptr;
+}
+
 
 #endif //PARCIAL2_ARBOLYHEAPNARIO_PILA_H
