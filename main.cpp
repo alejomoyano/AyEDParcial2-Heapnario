@@ -2,6 +2,7 @@
 #include <fstream>
 #include <regex>
 #include <vector>
+#include <bits/stdc++.h>
 #include "Clases/ArbolHeapNario.h"
 
 
@@ -31,5 +32,9 @@ int main() {
 
         }
     }
+    arbol.heapsort();
+
+//    arbol.print_arbol();
+    cout<<"final"<<endl; //para poder debuggear y ver cómo se armó el arbol
 
 }

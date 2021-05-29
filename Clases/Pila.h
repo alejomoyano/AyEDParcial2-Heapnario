@@ -23,9 +23,15 @@ public:
 
     bool esVacia();
 
+    //veo el ultimo valor ingresado, no lo elimino de la pila
     T peek();
 
     int size();
+    //saco el ultimo valor ingresado pero sin devolverme dicho valor. solo elimino
+    void desapilar();
+
+    T getNextInicio();
+
 };
 
 
@@ -114,5 +120,22 @@ int Pila<T>::size() {
 
     return cont;
 }
+
+template<class T>
+void Pila<T>::desapilar() {
+    if (esVacia())
+        throw 1;
+
+    Nodo<T> *aux = inicio;
+    inicio = inicio->getNext();
+    delete aux;
+
+}
+
+template<class T>
+T Pila<T>::getNextInicio() {
+    return inicio->getNext()->getDato();
+}
+
 
 #endif //ALGORITMOS_TP1_PILA_H

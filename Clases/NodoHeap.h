@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <vector>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -36,6 +37,15 @@ public:
     NodoHeap<T>* buscarDato(T c);
 
     NodoHeap<T>* buscarDatoEnHijos(T t);
+
+    void setDato(T nuevo);
+
+    void comparar(NodoHeap<T>* nodob);
+
+    vector<NodoHeap<T>*> getHijos();
+
+    void print_nodo();
+
 
 };
 /**
@@ -133,6 +143,55 @@ template<class T>
 int NodoHeap<T>::getRepeticion() {
     return repeticiones;
 }
+
+
+template<class T>
+void NodoHeap<T>::setDato(T nuevo) {
+    dato = nuevo;
+}
+
+
+
+//aplico el método sobre el nodo hijo comparando con el nodo padre (nodob) y los hijos que ya pueda tener
+template<class T>
+void NodoHeap<T>::comparar(NodoHeap<T> *nodob) {
+    if(nodob!= nullptr) {
+        T dato_h = this->getDato(); //dato del nodo donde estoy llamando la funcion, el posible hijo
+
+        T dato_p = nodob->getDato(); //dato del que sería el padre
+
+        //compara alfabeticamente dos strings. si a(dato padre) es menor a b(dato hijo), devuelve 1 y hace el swap para
+        // que quede el  mayor alfabeticamente como padre. sino, 0
+        if (dato_p.compare(dato_h) < 0) {
+            T aux = nodob->getDato();
+            nodob->setDato(dato_h);
+            this->setDato(aux);
+
+            nodob->comparar(nodob->getPadre());
+        }
+
+    }
+}
+
+template<class T>
+vector<NodoHeap<T> *> NodoHeap<T>::getHijos() {
+    return hijos;
+}
+/*
+template<class T>
+void NodoHeap<T>::print_nodo() {
+    if(!(this->getHijos().empty())){
+        vector<NodoHeap<T>*> child = this->getHijos();
+        for(int i=0; i <child.size(); i++){
+            cout<<child.at(i)->getDato()<<endl;
+        }
+        for(int i=0; i <child.size(); i++){
+            child.at(i)->print_nodo();
+        }
+    }
+
+
+}*/
 
 
 #endif //ALGORITMOS_TP2_NODO_H

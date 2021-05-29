@@ -29,6 +29,8 @@ iostream
 -
 vector
 -
+bits/stdc++.h
+-
 
 C:/Users/Virginia/CLionProjects/AyEDParcial2-Heapnario/Clases/Pila.h
 Nodo.h
@@ -42,6 +44,8 @@ fstream
 regex
 -
 vector
+-
+bits/stdc++.h
 -
 Clases/ArbolHeapNario.h
 C:/Users/Virginia/CLionProjects/AyEDParcial2-Heapnario/Clases/ArbolHeapNario.h
