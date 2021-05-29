@@ -48,7 +48,7 @@ void ArbolHeapNario<T>::put(T dato) {
         cola.encolar(raiz);
         pila.push(raiz);
         primer_pila = raiz; //ya queda guardada la dirección del nodo que ingresa primero a la pila
-        //cout<<raiz->getDato()<<endl;
+        cout<<raiz->getDato()<<endl;
         //cout<<endl<<endl;
     }
     else {
@@ -60,6 +60,8 @@ void ArbolHeapNario<T>::put(T dato) {
         else{
             NodoHeap<T> *aux = cola.verFrente();
             NodoHeap<T> *nodoNuevo = new NodoHeap<T>(dato);
+            cout <<aux->getDato()<<endl;
+            cout<<nodoNuevo->getDato()<<endl<<endl;
             //aca se arma el heap inicial
             nodoNuevo->comparar(aux);
             aux->putHijo(nodoNuevo);
@@ -67,6 +69,8 @@ void ArbolHeapNario<T>::put(T dato) {
             cola.encolar(nodoNuevo);
             pila.push(nodoNuevo);
 
+            cout <<aux->getDato()<<endl;
+            cout<<nodoNuevo->getDato()<<endl<<endl;
             if(aux->getCantidadHijos() == n)
                 cola.desencolar();
 
@@ -76,19 +80,22 @@ void ArbolHeapNario<T>::put(T dato) {
 
 template<class T>
 void ArbolHeapNario<T>::heapsort() {
-    sort(pila.peek()); //le doy el último elemento agregado a la pila (no lo saco, solo observo)
-    pila.peek()->comparar(pila.peek()->getPadre());
-    this->heapsort();
+    while(!(pila.esVacia())) {
+        NodoHeap<T>* ult_pila = pila.peek();
+        T aux = ult_pila->getDato();
+        ult_pila->setDato(primer_pila->getDato());
+        primer_pila->setDato(aux);
+
+        pila.desapilar();
+
+        NodoHeap<T>* new_ult_pila = pila.peek();
+        NodoHeap<T>* father = new_ult_pila->getPadre();
+        new_ult_pila->comparar(father);
+    }
     cout << "El arbol está ordenado" <<endl;
 }
 
-template<class T>
-void ArbolHeapNario<T>::sort(NodoHeap<T>* ult_pila) {
-    T aux = ult_pila->getDato();
-    ult_pila->setDato(primer_pila->getDato());
-    primer_pila->setDato(aux);
-    pila.desapilar();
-}
+
 /*
 template<class T>
 void ArbolHeapNario<T>::print_arbol() {

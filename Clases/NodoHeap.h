@@ -44,8 +44,7 @@ public:
 
     vector<NodoHeap<T>*> getHijos();
 
-    void print_nodo();
-
+    void setRepeticiones(int nuevo);
 
 };
 /**
@@ -164,8 +163,13 @@ void NodoHeap<T>::comparar(NodoHeap<T> *nodob) {
         // que quede el  mayor alfabeticamente como padre. sino, 0
         if (dato_p.compare(dato_h) < 0) {
             T aux = nodob->getDato();
-            nodob->setDato(dato_h);
+            int aux2 = this->getRepeticion();
             this->setDato(aux);
+            this->setRepeticiones(nodob->getRepeticion());
+
+            nodob->setDato(dato_h);
+            nodob->setRepeticiones(aux2);
+
 
             nodob->comparar(nodob->getPadre());
         }
@@ -176,6 +180,11 @@ void NodoHeap<T>::comparar(NodoHeap<T> *nodob) {
 template<class T>
 vector<NodoHeap<T> *> NodoHeap<T>::getHijos() {
     return hijos;
+}
+
+template<class T>
+void NodoHeap<T>::setRepeticiones(int nuevo) {
+    repeticiones = nuevo;
 }
 /*
 template<class T>
