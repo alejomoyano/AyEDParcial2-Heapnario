@@ -1,5 +1,5 @@
-#ifndef PARCIAL2_ARBOLYHEAPNARIO_COLA_H
-#define PARCIAL2_ARBOLYHEAPNARIO_COLA_H
+#ifndef ALGORITMOS_TP1_COLA_H
+#define ALGORITMOS_TP1_COLA_H
 
 #include "Nodo.h"
 
@@ -14,13 +14,20 @@ private:
     Nodo<T> *frente;
     Nodo<T> *fondo;
 
+
 public:
     Cola();
+
 //    ~Cola();  El destructor genera problemas si no existe constructor por copia
+
     void encolar(T dato);
+
     T desencolar();
+
     bool esVacia();
+
     void vaciar();
+
     T verFrente();
 };
 
@@ -51,8 +58,8 @@ Cola<T>::Cola() {
  */
 template<class T>
 void Cola<T>::encolar(T dato) {
-
     Nodo<T> *aux = new Nodo<T>(dato);
+
     // Si la cola esta vacia
     if (fondo == NULL && frente == NULL) {
         frente = fondo = aux;
@@ -72,7 +79,8 @@ void Cola<T>::encolar(T dato) {
 template<class T>
 T Cola<T>::desencolar() {
 
-    if (esVacia()) throw 1;
+    if (esVacia())
+        throw 1;
 
     // si no es vacia.
     T tmp;
@@ -81,6 +89,7 @@ T Cola<T>::desencolar() {
     frente = frente->getNext();
     tmp = aux->getDato();
     delete aux;
+
     if (frente == NULL)
         fondo = frente;
 
@@ -103,8 +112,10 @@ bool Cola<T>::esVacia() {
  */
 template<class T>
 void Cola<T>::vaciar() {
+
     while(frente != NULL)
         desencolar();
+
 }
 
 
@@ -113,8 +124,9 @@ void Cola<T>::vaciar() {
  */
 template<class T>
 T Cola<T>::verFrente() {
-    if(esVacia()) throw 404;
+    if(esVacia())
+        throw 404;
     return frente->getDato();
 }
 
-#endif //PARCIAL2_ARBOLYHEAPNARIO_COLA_H
+#endif //ALGORITMOS_TP1_COLA_H
