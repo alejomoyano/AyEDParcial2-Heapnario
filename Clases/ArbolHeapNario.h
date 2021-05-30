@@ -17,7 +17,7 @@ private:
     NodoHeap<T> *raiz;
     Cola<NodoHeap<T>*> cola;
     Pila<NodoHeap<T>*> pila;
-    const NodoHeap<T> *primer_pila; //primer elemento que se agrega a la pila
+    NodoHeap<T> *primer_pila; //primer elemento que se agrega a la pila
 public:
     ArbolHeapNario(int orden);
 
@@ -25,6 +25,9 @@ public:
 
     void heapsort();
 
+    void print_arbol();
+
+    void print_alfabetico(NodoHeap<T>* root);
 };
 
 
@@ -44,7 +47,7 @@ void ArbolHeapNario<T>::put(T dato) {
         cola.encolar(raiz);
         pila.push(raiz);
         primer_pila = raiz; //ya queda guardada la dirección del nodo que ingresa primero a la pila
-        cout<<raiz->getDato()<<endl;
+
         //cout<<endl<<endl;
     }
     else {
@@ -56,8 +59,7 @@ void ArbolHeapNario<T>::put(T dato) {
         else{
             NodoHeap<T> *aux = cola.verFrente();
             NodoHeap<T> *nodoNuevo = new NodoHeap<T>(dato);
-            cout <<aux->getDato()<<endl;
-            cout<<nodoNuevo->getDato()<<endl<<endl;
+
             //aca se arma el heap inicial
             nodoNuevo->comparar(aux);
             aux->putHijo(nodoNuevo);
@@ -65,8 +67,6 @@ void ArbolHeapNario<T>::put(T dato) {
             cola.encolar(nodoNuevo);
             pila.push(nodoNuevo);
 
-            cout <<aux->getDato()<<endl;
-            cout<<nodoNuevo->getDato()<<endl<<endl;
             if(aux->getCantidadHijos() == n)
                 cola.desencolar();
 
@@ -88,16 +88,43 @@ void ArbolHeapNario<T>::heapsort() {
 
         first->comparar_sort();
     }
-    cout << "El arbol esta ordenado" <<endl;
+    pila.first()->setNoPila();
+    pila.desapilar();
+    cout << "El arbol esta ordenado alfabeticamente." <<endl;
 }
 
 
-/*
+
 template<class T>
 void ArbolHeapNario<T>::print_arbol() {
-    cout<<raiz->getDato()<<endl;
-    raiz->print_nodo();
+    print_alfabetico(raiz);
 }
-*/
+
+template<class T>
+void ArbolHeapNario<T>::print_alfabetico(NodoHeap<T> *root) {
+    Cola<NodoHeap<T>*> aux;
+    aux.encolar(root);
+
+    while (!(aux.esVacia())){
+        int size = aux.size();
+
+        while(size>0){
+            NodoHeap<T>* i_raiz = aux.desencolar();
+            i_raiz->print_nodo();
+            vector<NodoHeap<T>*> children = i_raiz->getHijos();
+            if(!(children.empty())){
+                for(int i = 0; i < children.size(); i++){
+                    aux.encolar(children.at(i));
+                }
+                size--;
+            } else{
+                size--;
+            }
+        }
+        cout<<endl;
+    }
+
+}
+
 
 #endif //PARCIAL2_ARBOLYHEAPNARIO_ARBOLHEAPNARIO_H

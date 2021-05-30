@@ -57,6 +57,8 @@ public:
 
     void setNoPila();
 
+    void print_nodo();
+
 
 };
 /**
@@ -231,26 +233,6 @@ void NodoHeap<T>::comparar_sort() {
         }
 
     }
-    /*  NodoHeap<T>* a = this;
-        NodoHeap<T>* b = nodob;
-
-        T a_dato = a->getDato();
-        T b_dato = b->getDato();
-        while(a_dato<b_dato){
-            NodoHeap<T>* aux = b;
-            a = b;
-            b = aux->getPadre();
-            a_dato = a->getDato();
-            b_dato = b->getDato();
-        }
-        a->comparar(b);
-        if(b->getPadre() == nullptr){
-            vector<NodoHeap<T>*> child = a->getHijos();
-            for(int i = 0; i <child.size(); i++){
-                child.at(i)->comparar(a);
-            }
-        }
-    }*/
 }
 
 template<class T>
@@ -264,5 +246,16 @@ void NodoHeap<T>::setNoPila() {
         nopila = true;
     }
 }
+
+template<class T>
+void NodoHeap<T>::print_nodo() {
+    cout<<this->getDato();
+    if(this->getRepeticion()==1){
+        cout<<" - No se repite. "<<endl;
+    } else {
+        cout<<" - "<<this->getRepeticion()<<" repeticiones. "<<endl;
+    }
+}
+
 
 #endif //ALGORITMOS_TP2_NODO_H

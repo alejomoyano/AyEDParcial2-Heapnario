@@ -29,6 +29,9 @@ public:
     void vaciar();
 
     T verFrente();
+
+    int size();
+
 };
 
 
@@ -128,5 +131,22 @@ T Cola<T>::verFrente() {
         throw 404;
     return frente->getDato();
 }
+
+template<class T>
+int Cola<T>::size() {
+
+    if(esVacia()){return 0;}
+    Nodo<T> *aux = frente;
+    int cont = 0; //para tener en cuenta el de fondo que lo salta
+    while (aux != fondo) {
+        cont++;
+        aux = aux->getNext();
+    }
+    cont++;
+    return cont;
+
+
+}
+
 
 #endif //ALGORITMOS_TP1_COLA_H
