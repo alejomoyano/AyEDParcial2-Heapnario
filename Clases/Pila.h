@@ -30,7 +30,7 @@ public:
     //saco el ultimo valor ingresado pero sin devolverme dicho valor. solo elimino
     void desapilar();
 
-    T getNextInicio();
+    T first();
 
 };
 
@@ -132,9 +132,14 @@ void Pila<T>::desapilar() {
 
 }
 
-template<class T>
-T Pila<T>::getNextInicio() {
-    return inicio->getNext()->getDato();
+template <class T> T Pila<T>::first() {
+    if(esVacia()){return 0;}
+    Nodo<T> *aux = inicio;
+
+    while (aux->getNext() != NULL) {
+        aux = aux->getNext();
+    }
+    return aux->getDato();
 }
 
 

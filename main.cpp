@@ -32,7 +32,7 @@ int main() {
 
         }
     }
-    //arbol.heapsort();
+    arbol.heapsort();
 
 //    arbol.print_arbol();
     cout<<"final"<<endl; //para poder debuggear y ver cómo se armó el arbol

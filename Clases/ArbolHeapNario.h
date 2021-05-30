@@ -17,17 +17,13 @@ private:
     NodoHeap<T> *raiz;
     Cola<NodoHeap<T>*> cola;
     Pila<NodoHeap<T>*> pila;
-    NodoHeap<T>* primer_pila; //primer elemento que se agrega a la pila
+    const NodoHeap<T> *primer_pila; //primer elemento que se agrega a la pila
 public:
     ArbolHeapNario(int orden);
 
     void put(T dato);
 
     void heapsort();
-
-    void sort(NodoHeap<T>* ult_pila);
-
-    void print_arbol();
 
 };
 
@@ -80,19 +76,19 @@ void ArbolHeapNario<T>::put(T dato) {
 
 template<class T>
 void ArbolHeapNario<T>::heapsort() {
-    while(!(pila.esVacia())) {
-        NodoHeap<T>* ult_pila = pila.peek();
-        T aux = ult_pila->getDato();
-        ult_pila->setDato(primer_pila->getDato());
-        primer_pila->setDato(aux);
+    while(!(pila.size()==1)) {
+        //tengo que usar así porque no funciona el constructor por copia
+        NodoHeap<T>* first = pila.first();
+        NodoHeap<T>* last = pila.peek();
+        last->swap_dato(first);
+        last->swap_repeticion(first);
 
+        last->setNoPila();
         pila.desapilar();
 
-        NodoHeap<T>* new_ult_pila = pila.peek();
-        NodoHeap<T>* father = new_ult_pila->getPadre();
-        new_ult_pila->comparar(father);
+        first->comparar_sort();
     }
-    cout << "El arbol está ordenado" <<endl;
+    cout << "El arbol esta ordenado" <<endl;
 }
 
 

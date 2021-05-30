@@ -10,10 +10,11 @@ using namespace std;
 template<class T>
 class NodoHeap {
 private:
-    int repeticiones=1; //cuenta cantidad de veces q se repite la palabra en el texto
+    int repeticiones = 1; //cuenta cantidad de veces q se repite la palabra en el texto
     T dato;
     NodoHeap<T> *padre;
     vector<NodoHeap<T>*> hijos;
+    bool nopila = false;
 
 public:
     NodoHeap(T d);
@@ -45,6 +46,17 @@ public:
     vector<NodoHeap<T>*> getHijos();
 
     void setRepeticiones(int nuevo);
+
+    void swap_dato(NodoHeap<T>* new_nodo);
+
+    void swap_repeticion(NodoHeap<T>* new_nodo);
+
+    void comparar_sort();
+
+    bool desapilado();
+
+    void setNoPila();
+
 
 };
 /**
@@ -159,18 +171,10 @@ void NodoHeap<T>::comparar(NodoHeap<T> *nodob) {
 
         T dato_p = nodob->getDato(); //dato del que sería el padre
 
-        //compara alfabeticamente dos strings. si a(dato padre) es menor a b(dato hijo), devuelve 1 y hace el swap para
-        // que quede el  mayor alfabeticamente como padre. sino, 0
         if (dato_p.compare(dato_h) < 0) {
-            T aux = nodob->getDato();
-            int aux2 = this->getRepeticion();
-            this->setDato(aux);
-            this->setRepeticiones(nodob->getRepeticion());
 
-            nodob->setDato(dato_h);
-            nodob->setRepeticiones(aux2);
-
-
+            this->swap_dato(nodob);
+            this->swap_repeticion(nodob);
             nodob->comparar(nodob->getPadre());
         }
 
@@ -186,21 +190,79 @@ template<class T>
 void NodoHeap<T>::setRepeticiones(int nuevo) {
     repeticiones = nuevo;
 }
-/*
+
 template<class T>
-void NodoHeap<T>::print_nodo() {
-    if(!(this->getHijos().empty())){
-        vector<NodoHeap<T>*> child = this->getHijos();
-        for(int i=0; i <child.size(); i++){
-            cout<<child.at(i)->getDato()<<endl;
+void NodoHeap<T>::swap_dato(NodoHeap<T> *nodob) {
+    T aux = this->getDato();
+    this->setDato(nodob->getDato());
+    nodob->setDato(aux);
+
+}
+
+template<class T>
+void NodoHeap<T>::swap_repeticion(NodoHeap<T> *nodob) {
+    int aux = this->getRepeticion();
+    this->setRepeticiones(nodob->getRepeticion());
+    nodob->setRepeticiones(aux);
+}
+
+template<class T>
+void NodoHeap<T>::comparar_sort() {
+
+    vector<NodoHeap<T>*>children = this->getHijos();
+    if(!(children.empty())){
+        for(int i = 0; i<children.size(); i++) {
+            if(!(children.at(i)->desapilado())){
+                NodoHeap<T>* father = children.at(i)->getPadre();
+                if(father!= nullptr) {
+                    T dato_h = children.at(i)->getDato(); //dato del nodo donde estoy llamando la funcion, el posible hijo
+                    T dato_p = father->getDato(); //dato del que sería el padre
+                    if (dato_p.compare(dato_h) < 0) {
+                        children.at(i)->swap_dato(father);
+                        children.at(i)->swap_repeticion(father);
+                    }
+                }
+            }
         }
-        for(int i=0; i <child.size(); i++){
-            child.at(i)->print_nodo();
+        for(int j = 0; j<children.size(); j++){
+            if(!(children.at(j)->desapilado())){
+            children.at(j)->comparar_sort();
+            }
         }
+
     }
+    /*  NodoHeap<T>* a = this;
+        NodoHeap<T>* b = nodob;
 
+        T a_dato = a->getDato();
+        T b_dato = b->getDato();
+        while(a_dato<b_dato){
+            NodoHeap<T>* aux = b;
+            a = b;
+            b = aux->getPadre();
+            a_dato = a->getDato();
+            b_dato = b->getDato();
+        }
+        a->comparar(b);
+        if(b->getPadre() == nullptr){
+            vector<NodoHeap<T>*> child = a->getHijos();
+            for(int i = 0; i <child.size(); i++){
+                child.at(i)->comparar(a);
+            }
+        }
+    }*/
+}
 
-}*/
+template<class T>
+bool NodoHeap<T>::desapilado() {
+    return nopila;
+}
 
+template<class T>
+void NodoHeap<T>::setNoPila() {
+    if(!nopila){
+        nopila = true;
+    }
+}
 
 #endif //ALGORITMOS_TP2_NODO_H
