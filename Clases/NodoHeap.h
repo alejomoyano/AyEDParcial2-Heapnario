@@ -16,6 +16,9 @@ private:
     vector<NodoHeap<T>*> hijos;
     bool nopila = false;
 
+    int comp = 0;
+    int swap = 0;
+
 public:
     NodoHeap(T d);
 
@@ -43,21 +46,32 @@ public:
 
     void comparar(NodoHeap<T>* nodob);
 
+
     vector<NodoHeap<T>*> getHijos();
 
     void setRepeticiones(int nuevo);
 
-    void swap_dato(NodoHeap<T>* new_nodo);
+    void swap_dato(NodoHeap<T>* nodob);
 
-    void swap_repeticion(NodoHeap<T>* new_nodo);
+    void swap_repeticion(NodoHeap<T>* nodob);
 
-    void comparar_sort();
+    NodoHeap<T>* comparar_sort(vector<NodoHeap<T>*> children);
 
     bool desapilado();
 
     void setNoPila();
 
-    void print_nodo();
+    int get_comp() {return comp;}
+    int get_swap() {return swap;}
+
+    void sum_comp() {comp++;}
+    void sum_swap() {swap++;}
+
+    void set_comp(int new_comp) {comp = new_comp; }
+    void set_swap(int new_swap) {swap = new_swap;}
+
+    void reset_comp() {comp = 0;}
+    void reset_swap() {swap = 0;}
 
 
 };
@@ -164,8 +178,32 @@ void NodoHeap<T>::setDato(T nuevo) {
 }
 
 
-
+/*
 //aplico el método sobre el nodo hijo comparando con el nodo padre (nodob) y los hijos que ya pueda tener
+template<class T>
+NodoHeap<T>* NodoHeap<T>::comparar(NodoHeap<T> *nodob) {
+    NodoHeap<T>* aux = this;
+    if(nodob!= nullptr) {
+        T dato_h = aux->getDato(); //dato del nodo donde estoy llamando la funcion, el posible hijo
+
+        T dato_p = nodob->getDato(); //dato del que sería el padre
+        aux->sum_comp();
+        if (dato_p.compare(dato_h) < 0) {
+            aux->sum_swap();
+
+            aux->swap_dato(nodob);
+            aux->swap_repeticion(nodob);
+
+            aux = nodob;
+            return nodob->comparar(nodob->getPadre());
+        }
+
+    }
+    return aux;
+}
+*/
+
+
 template<class T>
 void NodoHeap<T>::comparar(NodoHeap<T> *nodob) {
     if(nodob!= nullptr) {
@@ -182,6 +220,9 @@ void NodoHeap<T>::comparar(NodoHeap<T> *nodob) {
 
     }
 }
+
+
+
 
 template<class T>
 vector<NodoHeap<T> *> NodoHeap<T>::getHijos() {
@@ -208,10 +249,42 @@ void NodoHeap<T>::swap_repeticion(NodoHeap<T> *nodob) {
     nodob->setRepeticiones(aux);
 }
 
-template<class T>
-void NodoHeap<T>::comparar_sort() {
 
-    vector<NodoHeap<T>*>children = this->getHijos();
+template<class T>
+NodoHeap<T>* NodoHeap<T>::comparar_sort(vector<NodoHeap<T>*> children) {
+    NodoHeap<T>* aux = this;
+    T posible_raiz;
+    int k= -1; //para saber si no se swapeo con ningun hijo
+    if(!(children.empty())) { //aca solamente determino con cuales de los hijos hace el swap, antes de cambiar datos y repeticiones
+        for (int i = 0; i < children.size(); i++) {
+            if (!(children.at(i)->desapilado())) {
+                if (aux->getDato() > children.at(i)->getDato()) {
+                    aux->sum_comp();
+                } else {
+                    aux->sum_comp();
+                    if(posible_raiz < children.at(i)->getDato()){
+                        posible_raiz = children.at(i)->getDato();
+                        k=i;
+                    }
+                }
+            }
+        }
+    }
+    if(k == -1){
+        return aux;
+    } else {
+        aux->swap_dato(children.at(k));
+        aux->swap_repeticion(children.at(k));
+        aux->sum_swap();
+
+        int s_aux = aux->get_swap(); int c_aux = aux->get_comp();
+        aux->reset_swap();aux->reset_comp();
+        children.at(k)->set_swap(s_aux); children.at(k)->set_comp(c_aux);
+
+        aux = children.at(k);
+        return aux->comparar_sort(aux->getHijos());
+    }
+    /*vector<NodoHeap<T>*>children = this->getHijos();
     if(!(children.empty())){
         for(int i = 0; i<children.size(); i++) {
             if(!(children.at(i)->desapilado())){
@@ -219,6 +292,7 @@ void NodoHeap<T>::comparar_sort() {
                 if(father!= nullptr) {
                     T dato_h = children.at(i)->getDato(); //dato del nodo donde estoy llamando la funcion, el posible hijo
                     T dato_p = father->getDato(); //dato del que sería el padre
+                    s++;
                     if (dato_p.compare(dato_h) < 0) {
                         children.at(i)->swap_dato(father);
                         children.at(i)->swap_repeticion(father);
@@ -228,12 +302,13 @@ void NodoHeap<T>::comparar_sort() {
         }
         for(int j = 0; j<children.size(); j++){
             if(!(children.at(j)->desapilado())){
-            children.at(j)->comparar_sort();
+                children.at(j)->comparar_sort(s);
             }
         }
-
     }
+    return s;*/
 }
+
 
 template<class T>
 bool NodoHeap<T>::desapilado() {
@@ -247,15 +322,7 @@ void NodoHeap<T>::setNoPila() {
     }
 }
 
-template<class T>
-void NodoHeap<T>::print_nodo() {
-    cout<<this->getDato();
-    if(this->getRepeticion()==1){
-        cout<<" - No se repite. "<<endl;
-    } else {
-        cout<<" - "<<this->getRepeticion()<<" repeticiones. "<<endl;
-    }
-}
+
 
 
 #endif //ALGORITMOS_TP2_NODO_H

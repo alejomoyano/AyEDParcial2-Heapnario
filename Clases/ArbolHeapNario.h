@@ -1,6 +1,7 @@
 #ifndef PARCIAL2_ARBOLYHEAPNARIO_ARBOLHEAPNARIO_H
 #define PARCIAL2_ARBOLYHEAPNARIO_ARBOLHEAPNARIO_H
 
+#include <fstream>
 #include "NodoHeap.h"
 #include "Cola.h"
 #include "Pila.h"
@@ -18,6 +19,9 @@ private:
     Cola<NodoHeap<T>*> cola;
     Pila<NodoHeap<T>*> pila;
     NodoHeap<T> *primer_pila; //primer elemento que se agrega a la pila
+    int swap = 0;
+    int comp = 0;
+
 public:
     ArbolHeapNario(int orden);
 
@@ -28,6 +32,9 @@ public:
     void print_arbol();
 
     void print_alfabetico(NodoHeap<T>* root);
+
+
+
 };
 
 
@@ -76,18 +83,25 @@ void ArbolHeapNario<T>::put(T dato) {
 
 template<class T>
 void ArbolHeapNario<T>::heapsort() {
+
     while(!(pila.size()==1)) {
-        //tengo que usar así porque no funciona el constructor por copia
         NodoHeap<T>* first = pila.first();
-        NodoHeap<T>* last = pila.peek();
-        last->swap_dato(first);
-        last->swap_repeticion(first);
+        NodoHeap<T>* temp = pila.peek();
+        temp->swap_dato(first);
+        swap++;
+        temp->swap_repeticion(first);
 
-        last->setNoPila();
+        temp->setNoPila();
         pila.desapilar();
+        vector<NodoHeap<T>*> children = first->getHijos();
 
-        first->comparar_sort();
+        NodoHeap<T>*aux = first->comparar_sort(children);
+        comp = comp + aux->get_comp();
+        swap = swap + aux->get_swap();
+        aux->reset_comp();
+        aux->reset_swap();
     }
+
     pila.first()->setNoPila();
     pila.desapilar();
     cout << "El arbol esta ordenado alfabeticamente." <<endl;
@@ -104,13 +118,35 @@ template<class T>
 void ArbolHeapNario<T>::print_alfabetico(NodoHeap<T> *root) {
     Cola<NodoHeap<T>*> aux;
     aux.encolar(root);
+    ofstream salida;
+    string nombre = "Ordenado - n = " + to_string(n) + ".txt" ;
+
+    salida.open(nombre.c_str(), ios::out);
+
+    if(salida.fail()){
+        cout<<"No se pudo generar el archivo."<<endl;
+    }
+    cout<<"Lista de palabras ordenadas alfabeticamente"<<endl;
+    salida<<"Lista de palabras ordenadas alfabeticamente"<<endl;
+    cout<<"Cantidad de nodos definidos: "<<n<<". "<<endl<<endl;
+    salida<<"Cantidad de nodos definidos: "<<n<<". "<<endl<<endl;
 
     while (!(aux.esVacia())){
         int size = aux.size();
 
         while(size>0){
             NodoHeap<T>* i_raiz = aux.desencolar();
-            i_raiz->print_nodo();
+
+            salida<<i_raiz->getDato();
+            cout<<i_raiz->getDato();
+            if(i_raiz->getRepeticion()==1){
+                cout<<" - No se repite. "<<endl;
+                salida<<" - No se repite. "<<endl;
+            } else {
+                cout<<" - "<<i_raiz->getRepeticion()<<" repeticiones. "<<endl;
+                salida<<" - "<<i_raiz->getRepeticion()<<" repeticiones. "<<endl;
+            }
+
             vector<NodoHeap<T>*> children = i_raiz->getHijos();
             if(!(children.empty())){
                 for(int i = 0; i < children.size(); i++){
@@ -123,7 +159,9 @@ void ArbolHeapNario<T>::print_alfabetico(NodoHeap<T> *root) {
         }
         cout<<endl;
     }
-
+    cout<<"Los swaps fueron: "<<swap<<endl;
+    cout<<"Las comparaciones fueron: "<<comp<<endl;
+    salida.close();
 }
 
 

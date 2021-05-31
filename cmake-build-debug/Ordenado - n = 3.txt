@@ -1,0 +1,10 @@
+Lista de palabras ordenadas alfabeticamente
+Cantidad de nodos definidos: 3. 
+
+dummy - 2 repeticiones. 
+is - 2 repeticiones. 
+of - No se repite. 
+printing - No se repite. 
+simply - No se repite. 
+text - No se repite. 
+the - No se repite. 

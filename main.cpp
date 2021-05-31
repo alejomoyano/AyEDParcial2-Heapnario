@@ -32,6 +32,7 @@ int main() {
 
         }
     }
+
     arbol.heapsort();
     arbol.print_arbol();
 
