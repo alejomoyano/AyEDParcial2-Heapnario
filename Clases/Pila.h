@@ -19,18 +19,17 @@ public:
 
     void push(T dato);
 
-    T pop();
+    int size();
 
     bool esVacia();
 
-    //veo el ultimo valor ingresado, no lo elimino de la pila
+    T first();
+
     T peek();
 
-    int size();
-    //saco el ultimo valor ingresado pero sin devolverme dicho valor. solo elimino
-    void desapilar();
+    T pop();
 
-    T first();
+    void desapilar();
 
 };
 
@@ -67,9 +66,65 @@ template<class T>
 void Pila<T>::push(T dato) {
     Nodo<T> *aux = new Nodo<T>(dato, inicio);
     inicio = aux;
-//    inicio = new Nodo(dato,inicio);
 }
 
+/**
+ * Devuelve el tamaño de la pila
+ * @tparam T
+ * @return
+ */
+template<class T>
+int Pila<T>::size() {
+    if(esVacia()){return 0;}
+    Nodo<T> *aux = inicio;
+    int cont = 0;
+
+    while (aux != NULL) {
+        cont++;
+        aux = aux->getNext();
+    }
+
+    return cont;
+}
+
+/**
+ * Responde si la pila se encuentra Vacía
+ * @tparam T
+ * @return
+ */
+template<class T>
+bool Pila<T>::esVacia() {
+    return inicio == NULL;
+}
+
+/**
+ * Devuelve el primer dato almacenado en la pila
+ * @tparam T
+ * @return
+ */
+template <class T>
+T Pila<T>::first() {
+    if(esVacia()){return 0;}
+    Nodo<T> *aux = inicio;
+
+    while (aux->getNext() != NULL) {
+        aux = aux->getNext();
+    }
+    return aux->getDato();
+}
+
+/**
+ * Devuelve el último dato almacenado en la pila, sin desapilarlo
+ * @tparam T
+ * @return
+ */
+template<class T>
+T Pila<T>::peek() {
+    if (esVacia())
+        throw 1;
+
+    return inicio->getDato();
+}
 
 /**
  * Obtener el dato de la pila
@@ -91,36 +146,9 @@ T Pila<T>::pop() {
 }
 
 /**
- * Responde si la pila se encuentra Vacía
+ * Desapila el último dato ingresado a la Pila
  * @tparam T
- * @return
  */
-template<class T>
-bool Pila<T>::esVacia() {
-    return inicio == NULL;
-}
-
-template<class T>
-T Pila<T>::peek() {
-    if (esVacia())
-        throw 1;
-
-    return inicio->getDato();
-}
-template<class T>
-int Pila<T>::size() {
-    if(esVacia()){return 0;}
-    Nodo<T> *aux = inicio;
-    int cont = 0;
-
-    while (aux != NULL) {
-        cont++;
-        aux = aux->getNext();
-    }
-
-    return cont;
-}
-
 template<class T>
 void Pila<T>::desapilar() {
     if (esVacia())
@@ -130,16 +158,6 @@ void Pila<T>::desapilar() {
     inicio = inicio->getNext();
     delete aux;
 
-}
-
-template <class T> T Pila<T>::first() {
-    if(esVacia()){return 0;}
-    Nodo<T> *aux = inicio;
-
-    while (aux->getNext() != NULL) {
-        aux = aux->getNext();
-    }
-    return aux->getDato();
 }
 
 

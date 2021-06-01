@@ -1,10 +1,474 @@
+--------------------------------------------------------------------------------
 Lista de palabras ordenadas alfabeticamente
+Cantidad de palabras del texto inicial: 1000. 
 Cantidad de nodos definidos: 3. 
+--------------------------------------------------------------------------------
+Cant. de swaps para armado de Heap N-Aria: 309. 
+Cant. de comparaciones para armado de Heap N-Aria: 741. 
+--------------------------------------------------------------------------------
 
-dummy - 2 repeticiones. 
-is - 2 repeticiones. 
-of - No se repite. 
-printing - No se repite. 
-simply - No se repite. 
-text - No se repite. 
-the - No se repite. 
+1114000 - No se repite. 
+
+
+1939 - No se repite. 
+1940 - No se repite. 
+1947 - No se repite. 
+
+
+1957 - No se repite. 
+1959 - 2 repeticiones. 
+1970 - No se repite. 
+1971 - 2 repeticiones. 
+1997 - No se repite. 
+2 - No se repite. 
+2010 - 2 repeticiones. 
+2012 - 2 repeticiones. 
+2014 - 2 repeticiones. 
+
+
+2015 - No se repite. 
+2019 - No se repite. 
+2020 - 2 repeticiones. 
+2022 - 2 repeticiones. 
+2024 - No se repite. 
+2029 - No se repite. 
+22 - No se repite. 
+250 - No se repite. 
+3 - No se repite. 
+30 - No se repite. 
+350000 - No se repite. 
+4004 - No se repite. 
+5 - No se repite. 
+7 - No se repite. 
+71100 - No se repite. 
+77700 - No se repite. 
+9 - No se repite. 
+ABC - 3 repeticiones. 
+ABET-accredited - No se repite. 
+According - 3 repeticiones. 
+And - No se repite. 
+As - 2 repeticiones. 
+Atalla - 2 repeticiones. 
+Atanasoff - 2 repeticiones. 
+Atanasoff-Berry - No se repite. 
+BLS - 8 repeticiones. 
+Bardeen - No se repite. 
+
+
+Because - No se repite. 
+Bell - 3 repeticiones. 
+Berry - 2 repeticiones. 
+Both - No se repite. 
+Brattain - No se repite. 
+Bureau - No se repite. 
+Case - No se repite. 
+Cleveland - No se repite. 
+Clifford - 2 repeticiones. 
+CoE - No se repite. 
+Computer - 7 repeticiones. 
+CpE - No se repite. 
+Dawon - No se repite. 
+Due - No se repite. 
+ECE - No se repite. 
+EQANIE - No se repite. 
+Europe - No se repite. 
+Faggin - No se repite. 
+Fairchild - No se repite. 
+Federico - No se repite. 
+For - No se repite. 
+Hoff - No se repite. 
+However - No se repite. 
+In - 3 repeticiones. 
+Intel - 2 repeticiones. 
+Iowa - No se repite. 
+It - 2 repeticiones. 
+Job - No se repite. 
+John - 3 repeticiones. 
+Kahng - No se repite. 
+Labor - No se repite. 
+Labs - 3 repeticiones. 
+MOS - No se repite. 
+MOSFET - No se repite. 
+Marcian - No se repite. 
+Masatoshi - No se repite. 
+Mazor - No se repite. 
+Mohamed - 2 repeticiones. 
+Most - No se repite. 
+Noyce - No se repite. 
+Ohio - No se repite. 
+Other - No se repite. 
+Outlook - No se repite. 
+PC - No se repite. 
+Reserve - No se repite. 
+Robert - No se repite. 
+S - 2 repeticiones. 
+Semiconductor - No se repite. 
+Shima - No se repite. 
+Shockley - No se repite. 
+Slower - No se repite. 
+Some - No se repite. 
+Sometimes - No se repite. 
+Stanley - No se repite. 
+State - No se repite. 
+Statistics - No se repite. 
+The - 3 repeticiones. 
+Therefore - No se repite. 
+These - No se repite. 
+They - No se repite. 
+This - 4 repeticiones. 
+Today - No se repite. 
+Together - No se repite. 
+Typically - No se repite. 
+U - 2 repeticiones. 
+University - 2 repeticiones. 
+Usual - No se repite. 
+VLSI - No se repite. 
+Vincent - 2 repeticiones. 
+Walter - No se repite. 
+Western - No se repite. 
+What - 2 repeticiones. 
+While - No se repite. 
+William - No se repite. 
+a - 19 repeticiones. 
+above - No se repite. 
+accepted - No se repite. 
+accreditation - No se repite. 
+add - No se repite. 
+added - No se repite. 
+addition - No se repite. 
+
+
+advances - No se repite. 
+after - No se repite. 
+agencies - No se repite. 
+algebra - No se repite. 
+all - 2 repeticiones. 
+allowed - No se repite. 
+along - No se repite. 
+also - 4 repeticiones. 
+among - No se repite. 
+an - 4 repeticiones. 
+analog - 2 repeticiones. 
+and - 41 repeticiones. 
+application - No se repite. 
+applications - No se repite. 
+are - 4 repeticiones. 
+areas - No se repite. 
+around - No se repite. 
+array - No se repite. 
+as - 8 repeticiones. 
+aspects - No se repite. 
+at - 8 repeticiones. 
+attributed - No se repite. 
+average - 3 repeticiones. 
+bachelor's - 2 repeticiones. 
+background - No se repite. 
+be - 4 repeticiones. 
+because - No se repite. 
+been - No se repite. 
+before - 2 repeticiones. 
+began - 2 repeticiones. 
+beyond - No se repite. 
+boards - No se repite. 
+branch - No se repite. 
+breadth - No se repite. 
+breakthroughs - No se repite. 
+bug - No se repite. 
+build - No se repite. 
+but - 2 repeticiones. 
+by - 6 repeticiones. 
+calculus - No se repite. 
+called - No se repite. 
+can - 3 repeticiones. 
+careers - No se repite. 
+chip - No se repite. 
+chips - No se repite. 
+choose - No se repite. 
+circuit - 4 repeticiones. 
+classes - No se repite. 
+code - No se repite. 
+comes - No se repite. 
+commonly - No se repite. 
+communications - No se repite. 
+compared - No se repite. 
+complete - 2 repeticiones. 
+computer - 33 repeticiones. 
+computers - 2 repeticiones. 
+computing - No se repite. 
+concerns - No se repite. 
+concurrently - No se repite. 
+continue - No se repite. 
+control - No se repite. 
+cost - 2 repeticiones. 
+countries - No se repite. 
+courses - No se repite. 
+created - No se repite. 
+curriculum - 2 repeticiones. 
+cybersecurity - No se repite. 
+cycle - No se repite. 
+declaring - No se repite. 
+decrease - No se repite. 
+degree - 6 repeticiones. 
+design - 7 repeticiones. 
+designing - 4 repeticiones. 
+develop - No se repite. 
+developers - No se repite. 
+developing - 2 repeticiones. 
+development - No se repite. 
+digital - 3 repeticiones. 
+discarded - No se repite. 
+disciplines - No se repite. 
+dismantled - No se repite. 
+divided - No se repite. 
+done - No se repite. 
+down - 4 repeticiones. 
+due - No se repite. 
+electrical - 5 repeticiones. 
+electronic - 7 repeticiones. 
+embedded - 2 repeticiones. 
+emerged - No se repite. 
+employment - No se repite. 
+engineering - 35 repeticiones. 
+engineers - 11 repeticiones. 
+entry-level - No se repite. 
+equal - No se repite. 
+especially - No se repite. 
+established - No se repite. 
+estimate - 5 repeticiones. 
+estimated - 2 repeticiones. 
+example - No se repite. 
+existing - No se repite. 
+expected - 2 repeticiones. 
+faster - No se repite. 
+field - No se repite. 
+field-effect - No se repite. 
+fields - 3 repeticiones. 
+firms - No se repite. 
+firmware - 2 repeticiones. 
+first - 3 repeticiones. 
+fixing - No se repite. 
+focus - No se repite. 
+focuses - No se repite. 
+for - 13 repeticiones. 
+foreign - No se repite. 
+former - No se repite. 
+forms - No se repite. 
+four - No se repite. 
+from - 7 repeticiones. 
+full - No se repite. 
+further - 3 repeticiones. 
+general - No se repite. 
+generally - No se repite. 
+graduate - No se repite. 
+greater - No se repite. 
+growing - 2 repeticiones. 
+growth - 2 repeticiones. 
+hardware - 9 repeticiones. 
+hardware-software - No se repite. 
+has - No se repite. 
+have - No se repite. 
+having - No se repite. 
+heavily - No se repite. 
+helpful - No se repite. 
+high - No se repite. 
+higher - No se repite. 
+how - 2 repeticiones. 
+important - No se repite. 
+improving - No se repite. 
+in - 28 repeticiones. 
+in-depth - No se repite. 
+include - 3 repeticiones. 
+increase - No se repite. 
+increases - No se repite. 
+increasing - No se repite. 
+individual - No se repite. 
+industry - No se repite. 
+instead - No se repite. 
+institutions - 3 repeticiones. 
+integrate - No se repite. 
+integrated - No se repite. 
+integrates - No se repite. 
+integration - No se repite. 
+into - 2 repeticiones. 
+inventors - No se repite. 
+involved - No se repite. 
+involving - No se repite. 
+is - 18 repeticiones. 
+it - 3 repeticiones. 
+job - No se repite. 
+jobs - 5 repeticiones. 
+junior - No se repite. 
+keep - No se repite. 
+knowledge - 2 repeticiones. 
+known - No se repite. 
+large - No se repite. 
+larger - No se repite. 
+late - No se repite. 
+learn - No se repite. 
+learning - 3 repeticiones. 
+least - No se repite. 
+like - No se repite. 
+made - 2 repeticiones. 
+major - No se repite. 
+manage - No se repite. 
+many - 4 repeticiones. 
+master's - No se repite. 
+mathematics - 4 repeticiones. 
+may - No se repite. 
+metal-oxide-semiconductor - No se repite. 
+microcontrollers - 2 repeticiones. 
+microprocessor - No se repite. 
+microprocessors - No se repite. 
+mixed - No se repite. 
+modern - No se repite. 
+monitor - No se repite. 
+monolithic - No se repite. 
+most - 2 repeticiones. 
+motors - No se repite. 
+must - No se repite. 
+necessary - 2 repeticiones. 
+network - No se repite. 
+new - No se repite. 
+not - No se repite. 
+occupations - 2 repeticiones. 
+of - 32 repeticiones. 
+offer - No se repite. 
+on - 2 repeticiones. 
+once - No se repite. 
+one - 2 repeticiones. 
+ones - No se repite. 
+only - 2 repeticiones. 
+operating - No se repite. 
+or - 8 repeticiones. 
+original - No se repite. 
+other - No se repite. 
+outsourced - No se repite. 
+over - No se repite. 
+own - No se repite. 
+oxidation - No se repite. 
+part - No se repite. 
+particularly - No se repite. 
+passivation - No se repite. 
+percent - No se repite. 
+personal - 2 repeticiones. 
+physics - 3 repeticiones. 
+picture - No se repite. 
+possible - No se repite. 
+primary - No se repite. 
+process - 2 repeticiones. 
+program - No se repite. 
+programming - No se repite. 
+programs - 2 repeticiones. 
+projected - No se repite. 
+put - No se repite. 
+quality - No se repite. 
+rapid - No se repite. 
+rate - No se repite. 
+referred - No se repite. 
+relative - No se repite. 
+release - No se repite. 
+relies - No se repite. 
+replica - No se repite. 
+require - 3 repeticiones. 
+required - No se repite. 
+requirements - No se repite. 
+research - No se repite. 
+researchers - No se repite. 
+robotics - No se repite. 
+s - 2 repeticiones. 
+same - No se repite. 
+savings - No se repite. 
+schools - No se repite. 
+science - 6 repeticiones. 
+scope - No se repite. 
+
+
+semiconductor - No se repite. 
+senior - No se repite. 
+sensors - 2 repeticiones. 
+seventeen - No se repite. 
+several - 2 repeticiones. 
+signal - No se repite. 
+significant - No se repite. 
+silicon - No se repite. 
+similar - No se repite. 
+similarity - No se repite. 
+single-chip - No se repite. 
+skills - No se repite. 
+software - 14 repeticiones. 
+some - 5 repeticiones. 
+somehow - No se repite. 
+soon - No se repite. 
+sound - No se repite. 
+specialized - No se repite. 
+strong - No se repite. 
+students - 2 repeticiones. 
+study - No se repite. 
+subcategories - No se repite. 
+such - No se repite. 
+suited - No se repite. 
+supercomputers - No se repite. 
+surface - No se repite. 
+system - No se repite. 
+systems - 7 repeticiones. 
+tasks - No se repite. 
+teacher - No se repite. 
+team - No se repite. 
+technology - 2 repeticiones. 
+ten-year - 2 repeticiones. 
+tertiary - No se repite. 
+testing - No se repite. 
+than - 2 repeticiones. 
+that - 2 repeticiones. 
+the - 40 repeticiones. 
+their - 5 repeticiones. 
+themselves - No se repite. 
+there - 3 repeticiones. 
+thermal - No se repite. 
+they - 2 repeticiones. 
+through - No se repite. 
+throughout - No se repite. 
+to - 29 repeticiones. 
+took - 2 repeticiones. 
+total - 3 repeticiones. 
+training - No se repite. 
+transistor - 3 repeticiones. 
+tribute - No se repite. 
+trigonometry - No se repite. 
+two - 2 repeticiones. 
+under - No se repite. 
+undergraduate - No se repite. 
+universities - No se repite. 
+up - 2 repeticiones. 
+used - 2 repeticiones. 
+using - No se repite. 
+usually - No se repite. 
+variety - No se repite. 
+via - No se repite. 
+was - 8 repeticiones. 
+were - No se repite. 
+when - 3 repeticiones. 
+where - No se repite. 
+which - 2 repeticiones. 
+who - No se repite. 
+will - No se repite. 
+with - 4 repeticiones. 
+words - No se repite. 
+work - 3 repeticiones. 
+working - No se repite. 
+world - No se repite. 
+world's - No se repite. 
+writing - No se repite. 
+year - 2 repeticiones. 
+years - 3 repeticiones. 
+
+
+--------------------------------------------------------------------------------
+Cantidad final de palabras (sin tener en cuenta repeticiones): 442. 
+--------------------------------------------------------------------------------
+Cant. de swaps para sort de Heap: 2263. 
+Cant. de comparaciones para sort de Heap: 5600. 
+--------------------------------------------------------------------------------
+Cant. de swaps TOTALES: 2572. 
+Cant. de comparaciones TOTALES: 6341. 
+--------------------------------------------------------------------------------
