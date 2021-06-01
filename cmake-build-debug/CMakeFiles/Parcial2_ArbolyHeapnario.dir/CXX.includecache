@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 C:/Users/Virginia/CLionProjects/AyEDParcial2-Heapnario/Clases/ArbolHeapNario.h
+iostream
+-
 fstream
 -
 NodoHeap.h
@@ -15,8 +17,6 @@ Cola.h
 C:/Users/Virginia/CLionProjects/AyEDParcial2-Heapnario/Clases/Cola.h
 Pila.h
 C:/Users/Virginia/CLionProjects/AyEDParcial2-Heapnario/Clases/Pila.h
-iostream
--
 
 C:/Users/Virginia/CLionProjects/AyEDParcial2-Heapnario/Clases/Cola.h
 Nodo.h

@@ -11,7 +11,7 @@ int main() {
     int n; //n de n-ario
     cout<<"--------------------------------------------------------------------------------"<<endl;
     cout<<"Algoritmos y Estructuras de Datos"<<endl;
-    cout<<"Proyecto Segundo Parcial – 2021"<<endl;
+    cout<<"Proyecto Segundo Parcial 2021"<<endl;
     cout<<"Implementar Ordenamiento Heap Sort"<<endl;
     cout<<"--------------------------------------------------------------------------------"<<endl;
     cout << "Ingrese el orden del monticulo ('n'): ";
@@ -38,7 +38,7 @@ int main() {
     }
 
     arbol.heapsort(); // Realiza el ordenamiento final de la Heap
-    arbol.print_arbol(); // Genera un archivo .txt y muestra por pantalla el resultado final del odenamiento
+    arbol.print_arbol(); // Genera un archivo .txt y muestra por pantalla el resultado final del ordenamiento
 
     cout<<"Final de la implementacion del ordenamiento Heap Sort. "<<endl;
 

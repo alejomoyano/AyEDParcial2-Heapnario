@@ -1,11 +1,12 @@
 #ifndef PARCIAL2_ARBOLYHEAPNARIO_ARBOLHEAPNARIO_H
 #define PARCIAL2_ARBOLYHEAPNARIO_ARBOLHEAPNARIO_H
 
+#include <iostream>
 #include <fstream>
 #include "NodoHeap.h"
 #include "Cola.h"
 #include "Pila.h"
-#include <iostream>
+
 using namespace std;
 
 /**
@@ -40,7 +41,7 @@ public:
 
     void put(T dato);
 
-    // Método de comparacion para Armado de Heap
+    // Método de comparación para Armado de Heap
     void comparar(NodoHeap<T>* nodoNuevo,NodoHeap<T>* nodob );
 
     // Método de ordenamiento final de Heap
@@ -83,6 +84,8 @@ void ArbolHeapNario<T>::put(T dato) {
 
     }
     else {
+        //-------------------------------------------------- DESCOMENTAR PARA CONSIDERAR REPETICIONES
+        /*
         NodoHeap<T>* a = raiz->buscarDato(dato); // Corroboro si la palabra no fue agregada anteriormente
         if (a!= nullptr){ // La palabra ya fue agregada
             a->sumarRepeticion();
@@ -92,7 +95,11 @@ void ArbolHeapNario<T>::put(T dato) {
         }
         else{
             // Si la palabra no está repetida, ingresa al Arbol y se tiene en cuenta
-            // para el tamaño final del texto
+            // para el tamaño final del text
+            */
+        // -------------------------------------------------------------------------------------------
+
+
             size_final++;
 
             NodoHeap<T> *aux = cola.verFrente(); // Se necesita el Nodo Padre actual que todavía puede tener Nodos Hijos
@@ -100,7 +107,7 @@ void ArbolHeapNario<T>::put(T dato) {
 
             comparar(nodoNuevo, aux); // Realiza la comparación entre ellos y recursivamente hacia la raíz del Arbol
 
-            // El NodoHeap con el dato menor, se configura como hijo del NodoHeadp que tenía el dato mayor
+            // El NodoHeap con el dato menor, se configura como hijo del NodoHeap que tenía el dato mayor
             aux->putHijo(nodoNuevo);
             nodoNuevo->setPadre(aux);
 
@@ -112,8 +119,24 @@ void ArbolHeapNario<T>::put(T dato) {
             if(aux->getCantidadHijos() == n)
                 cola.desencolar();
 
-        }
     }
+}
+
+/**
+ * Genera un archivo de salida que cuenta con la list de palabras ordenadas alfabéticamente
+ * junto con su cantidad de repeticiones y la cantidad de comparaciones y swaps realizadas
+ * realizadas en el armado y ordenamiento de la Heap
+ * @tparam T
+ * @param punteros a NodoHeap que inician la comparación recursiva junto con punteros a los
+ * parámetros comp y swap
+*/
+template<class T>
+void ArbolHeapNario<T>::comparar(NodoHeap<T> *nodoNuevo, NodoHeap<T> *nodob) {
+    int* c;
+    int* s;
+    c = &comp_presort;
+    s = &swap_presort;
+    nodoNuevo->comparar(nodob,c,s);
 }
 
 /**
@@ -122,8 +145,11 @@ void ArbolHeapNario<T>::put(T dato) {
 */
 template<class T>
 void ArbolHeapNario<T>::heapsort() {
-
-    // Mientras no me quede solamente un NodoHeap en la Pila, puedo realizar comparaciones
+    int* c;
+    int* s;
+    c = &comp;
+    s = &swap;
+    // Mientras no quede solamente un NodoHeap en la Pila, puedo realizar comparaciones
     while(!(pila.size()==1)) {
 
         // Se toma el NodoHeap que actualmente es la raíz del arbol con el último NodoHeap Hijo
@@ -133,7 +159,7 @@ void ArbolHeapNario<T>::heapsort() {
         NodoHeap<T>* temp = pila.peek();
         swap++;
         temp->swap_dato(first);
-        temp->swap_repeticion(first);
+        //temp->swap_repeticion(first); --------------------DESCOMENTAR PARA CONSIDERAR REPETICIONES
 
         // Temp es ahora el último Nodo Hoja que puede ser considerado para comparaciones, pero
         // se activa su flag de desapilado y se quita de la Pila
@@ -141,19 +167,10 @@ void ArbolHeapNario<T>::heapsort() {
         pila.desapilar();
 
         // Teniendo la nueva raíz del Arbol, se procede a hacer las comparaciones con los
-        // Nodos Hijos asociados a esa posición
+        // Nodos Hijos asociados a esa posición, modificando a través de punteros las variables
+        // "comp" y "swap" correspondientes a estos movimientos durante el ordenamiento
         vector<NodoHeap<T>*> children = first->getHijos();
-        NodoHeap<T>*aux = first->comparar_sort(children);
-
-        // Del puntero al último Nodo que sufrió modificaciones en la comparación, se
-        // obtiene la cantidad de comparaciones y swaps que se hicieron internamente en cada pasada
-        comp = comp + aux->get_comp();
-        swap = swap + aux->get_swap();
-
-        // Como está apuntando a un Nodo del Arbol, se resetean esos dos parámetros para que
-        // modificarse en futuras pasadas
-        aux->reset_comp();
-        aux->reset_swap();
+        first->comparar_sort(children,c,s);
     }
     // Una vez que se compararon los n-1 elementos de la pila, se termina de desapilar el último
     // elemento, activando el flag correspondiente y terminando con el ordenamiento
@@ -213,18 +230,19 @@ void ArbolHeapNario<T>::print_alfabetico(NodoHeap<T> *root) {
         while(size>0){
             NodoHeap<T>* i_raiz = aux.desencolar();
 
-            salida<<i_raiz->getDato();
-            cout<<i_raiz->getDato();
+            salida<<i_raiz->getDato()<<endl;
+            cout<<i_raiz->getDato()<<endl;
 
-            if(i_raiz->getRepeticion()==1){
-                cout<<" - No se repite. "<<endl;
-                salida<<" - No se repite. "<<endl;
+            //-------------------------------------------------- DESCOMENTAR PARA CONSIDERAR REPETICIONES
 
-            } else {
-                cout<<" - "<<i_raiz->getRepeticion()<<" repeticiones. "<<endl;
-                salida<<" - "<<i_raiz->getRepeticion()<<" repeticiones. "<<endl;
-
-            }
+            //if(i_raiz->getRepeticion()==1){
+            //    cout<<" - No se repite. "<<endl;
+            //    salida<<" - No se repite. "<<endl;
+            //} else {
+            //    cout<<" - "<<i_raiz->getRepeticion()<<" repeticiones. "<<endl;
+            //    salida<<" - "<<i_raiz->getRepeticion()<<" repeticiones. "<<endl;
+            //}
+            // -------------------------------------------------------------------------------------------
 
             vector<NodoHeap<T>*> children = i_raiz->getHijos();
             if(!(children.empty())){
@@ -238,9 +256,10 @@ void ArbolHeapNario<T>::print_alfabetico(NodoHeap<T> *root) {
         }
         salida<<endl<<endl;
     }
+    //DESCOMENTAR PARA CONSIDERAR REPETICIONES
+    //salida<<"--------------------------------------------------------------------------------"<<endl;
+    //salida<<"Cantidad final de palabras (sin tener en cuenta repeticiones): "<<size_final<<". "<<endl;
 
-    salida<<"--------------------------------------------------------------------------------"<<endl;
-    salida<<"Cantidad final de palabras (sin tener en cuenta repeticiones): "<<size_final<<". "<<endl;
     salida<<"--------------------------------------------------------------------------------"<<endl;
     salida<<"Cant. de swaps para sort de Heap: "<<swap<<". "<<endl;
     salida<<"Cant. de comparaciones para sort de Heap: "<<comp<<". "<<endl;
@@ -256,22 +275,7 @@ void ArbolHeapNario<T>::print_alfabetico(NodoHeap<T> *root) {
     salida.close();
 }
 
-/**
- * Genera un archivo de salida que cuenta con la list de palabras ordenadas alfabéticamente
- * junto con su cantidad de repeticiones y la cantidad de comparaciones y swaps realizadas
- * realizadas en el armado y ordenamiento de la Heap
- * @tparam T
- * @param punteros a NodoHeap que inician la comparación recursiva junto con punteros a los
- * parámetros comp y swap
-*/
-template<class T>
-void ArbolHeapNario<T>::comparar(NodoHeap<T> *nodoNuevo, NodoHeap<T> *nodob) {
-    int* c;
-    int* s;
-    c = &comp_presort;
-    s = &swap_presort;
-    nodoNuevo->comparar(nodob,c,s);
-}
+
 
 
 #endif //PARCIAL2_ARBOLYHEAPNARIO_ARBOLHEAPNARIO_H

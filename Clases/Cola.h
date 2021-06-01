@@ -4,7 +4,7 @@
 #include "Nodo.h"
 
 /**
- * Clase que implementa una Cola generica, ya que puede
+ * Clase que implementa una Cola genérica, ya que puede
  * almacenar cualquier tipo de dato T
  * @tparam T cualquier tipo de dato
  */
@@ -55,7 +55,7 @@ Cola<T>::Cola() {
 /**
  * Devuelve la cantidad de elementos de la Cola
  * @tparam T
- * @return
+ * @return cantidad de elementos
  */
 template<class T>
 int Cola<T>::size() {
@@ -76,7 +76,7 @@ int Cola<T>::size() {
 /**
  * Responde si la Cola se encuentra Vacía
  * @tparam T
- * @return
+ * @return true si es vacía
  */
 template<class T>
 bool Cola<T>::esVacia() {
@@ -103,7 +103,7 @@ void Cola<T>::encolar(T dato) {
 /**
  * Muestra el primer dato de la Cola sin desencolarlo
  * @tparam T
- * @return
+ * @return primer dato en la Cola
  */
 template<class T>
 T Cola<T>::verFrente() {

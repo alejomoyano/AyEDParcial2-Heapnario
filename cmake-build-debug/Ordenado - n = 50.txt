@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
 Lista de palabras ordenadas alfabeticamente
 Cantidad de palabras del texto inicial: 1000. 
-Cantidad de nodos definidos: 3. 
+Cantidad de nodos definidos: 50. 
 --------------------------------------------------------------------------------
-Cant. de swaps para armado de Heap N-Aria: 705. 
-Cant. de comparaciones para armado de Heap N-Aria: 1695. 
+Cant. de swaps para armado de Heap N-Aria: 83. 
+Cant. de comparaciones para armado de Heap N-Aria: 1073. 
 --------------------------------------------------------------------------------
 
 1114000
@@ -13,8 +13,6 @@ Cant. de comparaciones para armado de Heap N-Aria: 1695.
 1939
 1940
 1947
-
-
 1957
 1959
 1959
@@ -24,8 +22,6 @@ Cant. de comparaciones para armado de Heap N-Aria: 1695.
 1997
 2
 2010
-
-
 2010
 2012
 2012
@@ -53,8 +49,6 @@ Cant. de comparaciones para armado de Heap N-Aria: 1695.
 ABC
 ABC
 ABC
-
-
 ABET-accredited
 According
 According
@@ -66,6 +60,8 @@ Atalla
 Atalla
 Atanasoff
 Atanasoff
+
+
 Atanasoff-Berry
 BLS
 BLS
@@ -136,8 +132,6 @@ Mohamed
 Most
 Noyce
 Ohio
-
-
 Other
 Outlook
 PC
@@ -381,8 +375,6 @@ computer
 computers
 computers
 computing
-
-
 concerns
 concurrently
 continue
@@ -1022,9 +1014,9 @@ years
 
 
 --------------------------------------------------------------------------------
-Cant. de swaps para sort de Heap: 5856. 
-Cant. de comparaciones para sort de Heap: 14956. 
+Cant. de swaps para sort de Heap: 2753. 
+Cant. de comparaciones para sort de Heap: 86666. 
 --------------------------------------------------------------------------------
-Cant. de swaps TOTALES: 6561. 
-Cant. de comparaciones TOTALES: 16651. 
+Cant. de swaps TOTALES: 2836. 
+Cant. de comparaciones TOTALES: 87739. 
 --------------------------------------------------------------------------------

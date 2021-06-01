@@ -45,8 +45,8 @@ Pila<T>::Pila() {
 
 
 ///**
-// * Destructor de la clase Lista, se encarga de liberar la memoria de todos los nodos
-// * utilizados en la lista
+// * Destructor de la clase Pila, se encarga de liberar la memoria de todos los nodos
+// * utilizados en la Pila
 // * @tparam T
 // */
 //template<class T>
@@ -71,7 +71,7 @@ void Pila<T>::push(T dato) {
 /**
  * Devuelve el tamaño de la pila
  * @tparam T
- * @return
+ * @return cantidad de elementos en la Pila
  */
 template<class T>
 int Pila<T>::size() {
@@ -90,7 +90,7 @@ int Pila<T>::size() {
 /**
  * Responde si la pila se encuentra Vacía
  * @tparam T
- * @return
+ * @return true si es vacía
  */
 template<class T>
 bool Pila<T>::esVacia() {
@@ -100,7 +100,7 @@ bool Pila<T>::esVacia() {
 /**
  * Devuelve el primer dato almacenado en la pila
  * @tparam T
- * @return
+ * @return primer dato que fue almacenado en la pila
  */
 template <class T>
 T Pila<T>::first() {
@@ -116,7 +116,7 @@ T Pila<T>::first() {
 /**
  * Devuelve el último dato almacenado en la pila, sin desapilarlo
  * @tparam T
- * @return
+ * @return último dato agregado a la Pila
  */
 template<class T>
 T Pila<T>::peek() {
