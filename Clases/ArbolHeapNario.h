@@ -213,6 +213,7 @@ void ArbolHeapNario<T>::print_alfabetico(NodoHeap<T> *root) {
     if(salida.fail()){
         cout<<"No se pudo generar el archivo."<<endl;
     }
+
     salida<<"--------------------------------------------------------------------------------"<<endl;
     salida<<"Lista de palabras ordenadas alfabeticamente"<<endl;
 

@@ -282,6 +282,8 @@ void NodoHeap<T>::comparar_sort(vector<NodoHeap<T>*> children, int *c, int*s) {
                         k=i; // Asigno a la variable k la posición del nodo con el que se tiene que hacer el intercambio
                     }
                 }
+            } else {
+                break;
             }
         }
     }
@@ -295,7 +297,7 @@ void NodoHeap<T>::comparar_sort(vector<NodoHeap<T>*> children, int *c, int*s) {
 
         // Ahora, realizamos la comparación con el Nodo que posee el dato mayor
         //  y los Nodos Hijos de esa posición
-        return children.at(k)->comparar_sort(children.at(k)->getHijos(),c,s);
+        children.at(k)->comparar_sort(children.at(k)->getHijos(),c,s);
     }
 }
 
